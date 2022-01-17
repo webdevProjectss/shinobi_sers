@@ -1,27 +1,32 @@
 import './App.css';
-import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Row, Col } from 'reactstrap';
-import Ninja from './assets/img/template.jpeg';
+
+import LandingPage from './components/LandingPage/LandingPage'
+
 
 function App() {
-  const StyledDiv = styled.div`
-  margin: 2rem auto;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  `;
+  // const StyledDiv = styled.div`
+  // margin: 2rem auto;
+  // max-width: 600px;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  // `;
 
-  const StyledCol = styled(Col)`
-  text-align:center;
-  justify-content:center;
-  `;
+  // const StyledCol = styled(Col)`
+  // text-align:center;
+  // justify-content:center;
+  // `;
 
   return (
-    <div>
-      <header
+    <LandingPage />
+  );
+}
+
+export default App;
+
+      /* <header
       style={{
         background: `#708090`,
         marginBottom: `1.45rem`,
@@ -101,62 +106,4 @@ function App() {
           <h7>Join our discord group and check out how-to-mint channel</h7>
         </StyledCol>
       </Row>
-    </StyledDiv>
-    </div>
-  );
-}
-
-export default App;
-
-
-/* <VerticalTimeline className="time-line">
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: '#061133', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  #061133' }}
-          date="Pre-Mint"
-          iconStyle={{ background: '#061133', color: '#fff' }}
-        >
-          <h7>Discord, Twitter and Website setup</h7>
-          <h7>Artwork self-drawn</h7>
-          <h7>Gather Shinobis</h7>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: '#061133', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  #0611330' }}
-          date="Upon Mint"
-          iconStyle={{ background: '#061133', color: '#fff' }}
-        // icon={<WorkIcon />}
-        >
-          <h7>Upload Ninjas to Solana chain</h7>
-          <h7>Digital Eyes Listing</h7>
-          <h7>Rarity Listing</h7>
-          <h7>NiftyNinjasDAO Setup</h7>  
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: '#061133', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  #061133' }}
-          date="Post Mint"
-          iconStyle={{ background: '#061133', color: '#fff' }}
-        >
-          <br/>
-          <h7>90% of royalties used to swept floor</h7>
-          <h7>Tiered lucky draws for holders for SOL giveaways</h7> 
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: '#061133', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  #061133' }}
-          date="Growth"
-          iconStyle={{ background: '#061133', color: '#fff' }}
-        >
-          <h7>Growth</h7>
-          <br/>
-          <h7>Further proceeds put into marketing</h7>
-          <h7>Collaboration with other smaller projects to increase visibility</h7>
-          <h7>Employment of influencers to further shill project on secondary markets</h7>
-          <h7>$NNINJA token airdropped to all holders</h7>
-        </VerticalTimelineElement>
-      </VerticalTimeline> */
+    </StyledDiv> */
