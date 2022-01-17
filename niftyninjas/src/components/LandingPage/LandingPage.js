@@ -1,15 +1,17 @@
 import React, { Fragment, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faDiscord,
-    faTwitter,
-    faInstagram
-  } from "@fortawesome/free-brands-svg-icons";
+// import { Link } from 'react-router-dom'
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//     faDiscord,
+//     faTwitter,
+//     faInstagram
+//   } from "@fortawesome/free-brands-svg-icons";
 import Countdown from 'react-countdown';
 import { Button } from '@mui/material'
 import { Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Fade from 'react-reveal/Fade'
+import Bounce from 'react-reveal/Bounce';
 
 import './LandingPage.css'
 import Timeline from '../Timeline/Timeline'
@@ -199,24 +201,26 @@ const LandingPage = () => {
                         
                         {/* Links */}
                         <div style={styling.links}>
-                            <Link to='' style={{textDecoration: 'none', color: 'white', fontFamily: 'assassin'}}>Rarity</Link>
-                            <Link to='' style={{textDecoration: 'none', color: 'white', fontFamily: 'assassin'}}>Mint</Link>
+                            {/* <Link to='#' style={{textDecoration: 'none', color: 'white', fontFamily: 'assassin'}}>Rarity</Link>
+                            <Link to='#' style={{textDecoration: 'none', color: 'white', fontFamily: 'assassin'}}>Mint</Link> */}
                         </div>
 
                         {/* Socials */}
                         <div style={styling.socials}>
-                            <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faDiscord} size='2x'/></a>
+                            {/* <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faDiscord} size='2x'/></a>
                             <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faInstagram} size='2x'/></a>
-                            <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faTwitter} size='2x'/></a>
+                            <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faTwitter} size='2x'/></a> */}
                         </div>
                     </div>
 
                     {/* Header */}
                     <div style={styling.header}>
                         <div style={styling.heading}>
-                            <h1 style={{marginBottom: '25px', fontSize: '90px', fontFamily: 'assassin'}}>Nifty Ninjas</h1>
-                            {/* <p>369 Ninjas hiding in the shadow</p> */}
-                            <p style={{fontFamily: 'assassin'}}>Are you worthy enough to catch it?</p>
+                            <Bounce bottom>
+                                <h1 style={{marginBottom: '25px', fontSize: '90px', fontFamily: 'assassin'}}>Nifty Ninjas</h1>
+                                {/* <p>369 Ninjas hiding in the shadow</p> */}
+                                <p style={{fontFamily: 'assassin'}}>Are you worthy enough to catch it?</p>
+                            </Bounce>    
                         </div>
                     </div>
 
@@ -230,10 +234,12 @@ const LandingPage = () => {
                     <div style={styling.description}>
                         <p style={{color: '#FFA700'}} className='font'>STEALTH AND PRECISION</p>
                         <p style={{fontSize: '48px', marginBottom: '30px', fontFamily: 'assassin'}}>Nifty Ninjas</p>
-                        <p className='font' style={{marginBottom: '0px'}}>Supply of Shinobis kept low, stealth and precision. All with a strong secondary
-                        market in mind.
-                        </p>
-                        <p className='font'>Unorthodox and stealthy, just like how we want these art pieces to be, an unusual opportunity to benefit from.</p>
+                        <Fade left>
+                            <p className='font' style={{marginBottom: '0px'}}>Supply of Shinobis kept low, stealth and precision. All with a strong secondary
+                            market in mind.
+                            </p>
+                            <p className='font'>Unorthodox and stealthy, just like how we want these art pieces to be, an unusual opportunity to benefit from.</p>
+                        </Fade>
                     </div>
 
                     {/* Slider */}
@@ -302,20 +308,26 @@ const LandingPage = () => {
                         <div style={team.team}>
                             <div style={team.individual}>
                                 <img src={bear1} alt='bear1' style={team.image}/>
-                                <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>kokoman</p>
-                                <p className='font'>Lead Developer</p>
+                                <Fade bottom>
+                                    <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>kokoman</p>
+                                    <p className='font'>Lead Developer</p>
+                                </Fade>
                             </div>
 
                             <div style={team.individual}>
                                 <img src={bear2} alt='bear1' style={team.image}/>
-                                <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>spam or ham</p>
-                                <p className='font'>Senior Developer</p>
+                                <Fade bottom>
+                                    <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>spam or ham</p>
+                                    <p className='font'>Senior Developer</p>
+                                </Fade>
                             </div>
 
                             <div style={team.individual}>
                                 <img src={bear3} alt='bear1' style={team.image}/>
-                                <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>wooohooo</p>
-                                <p className='font'>Developer</p>
+                                <Fade bottom>
+                                    <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>wooohooo</p>
+                                    <p className='font'>Developer</p>
+                                </Fade>
                             </div>
                         </div>
                     </div>

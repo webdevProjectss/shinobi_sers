@@ -1,4 +1,6 @@
 import React from 'react'
+import LightSpeed from 'react-reveal/LightSpeed'
+
 // import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 // import 'react-vertical-timeline-component/style.min.css';
 import ninja from '../../assets/img/template.jpeg'
@@ -50,46 +52,56 @@ const Timeline = () => {
             <div style={{border: '2px solid #808080'}}>
                 {/* Content 1*/}
                 <div style={roadmap.contentLeft} className='startofContent'>
-                    <div style={roadmap.description}>
-                        <h1>0% - Planning Phase 1</h1>
-                        <p className='font'>Deciding on the supply size, mint price/date, <br />art style and secondary market</p>
-                    </div>
+                    <LightSpeed left>
+                        <div style={roadmap.description}>
+                            <h1>0% - Planning Phase 1</h1>
+                            <p className='font'>Deciding on the supply size, mint price/date, <br />art style and secondary market</p>
+                        </div>
+                    </LightSpeed>
                     <img src={ninja} alt='ninja' style={roadmap.image}/>
                 </div>
 
                 {/* Content 2*/}
                 <div style={roadmap.contentRight}>
                     <img src={ninja} alt='ninja' style={roadmap.image}/>
-                    <div style={roadmap.description}>
-                        <h1>25% - Planning Phase 2</h1>
-                        <p className='font'>The beginning of hand drawing the art pieces.<br />Setting up socials, websites and marketing</p>
-                    </div>
+                    <LightSpeed right>
+                        <div style={roadmap.description}>
+                            <h1>25% - Planning Phase 2</h1>
+                            <p className='font'>The beginning of hand drawing the art pieces.<br />Setting up socials, websites and marketing</p>
+                        </div>
+                    </LightSpeed>
                 </div>
 
                 {/* Content 3*/}
                 <div style={roadmap.contentLeft}>
-                    <div style={roadmap.description}>
-                        <h1>50% - Planning Phase 3</h1>
-                        <p className='font'>Completion of artwork. <br />Planning and setting up giveaways, <br />collaboration to garner hype.</p>
-                    </div>
+                    <LightSpeed left>
+                        <div style={roadmap.description}>
+                            <h1>50% - Planning Phase 3</h1>
+                            <p className='font'>Completion of artwork. <br />Planning and setting up giveaways, <br />collaboration to garner hype.</p>
+                        </div>
+                    </LightSpeed>
                     <img src={ninja} alt='ninja' style={roadmap.image}/>
                 </div>
 
                 {/* Content 4*/}
                 <div style={roadmap.contentRight}>
                     <img src={ninja} alt='ninja' style={roadmap.image}/>
-                    <div style={roadmap.description}>
-                        <h1>75% - Minting Phase</h1>
-                        <p className='font'>Beginning of Minting <br />Continue to market, do giveaways and collaborations. <br />Start to code post-mint utilities for the community</p>
-                    </div>
+                    <LightSpeed left>
+                        <div style={roadmap.description}>
+                            <h1>75% - Minting Phase</h1>
+                            <p className='font'>Beginning of Minting <br />Continue to market, do giveaways and collaborations. <br />Start to code post-mint utilities for the community</p>
+                        </div>
+                    </LightSpeed>
                 </div>
 
                 {/* Content 5*/}
                 <div style={roadmap.contentLeft} className='endofContent'>
-                    <div style={roadmap.description}>
-                        <h1>100% - Post Mint Phase</h1>
-                        <p className='font'>Continue to market to support secondary market transactions. <br />Completion of utilities for holders of Nifty Ninjas <br/> - Full detail of our utilities can be found below.</p>
-                    </div>
+                    <LightSpeed left>
+                        <div style={roadmap.description}>
+                            <h1>100% - Post Mint Phase</h1>
+                            <p className='font'>Continue to market to support secondary market transactions. <br />Completion of utilities for holders of Nifty Ninjas <br/> - Full detail of our utilities can be found below.</p>
+                        </div>
+                    </LightSpeed>
                     <img src={ninja} alt='ninja' style={roadmap.image}/>
                 </div>
             </div>
