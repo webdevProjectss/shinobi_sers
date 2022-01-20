@@ -4,7 +4,7 @@ const footer = {
     container: {
         backgroundColor: "#333333",
         borderradius: "0 !important",
-        height: "20px",
+        height: "auto",
         margin: '6rem auto 0rem'
     },
     copyright: {

@@ -2,7 +2,7 @@
 
 .LPContainer {
     background-image: linear-gradient(to top, #000, transparent, transparent, transparent),
-    url('../../assets/img/niftyninjabg.png');
+    url('../../assets/img/cnbg2.png');
     background-position: center;
     height: 90vh;
 }
@@ -42,12 +42,13 @@
 .slide-track {
     display: flex;
     width: calc(250px * 14);
-    animation: scroll 30s linear infinite;
+    animation: scroll 25s linear infinite;
 }
+
 
 @keyframes scroll {
     0% {
-        transform: translateX(0);
+        transform: translateX(0px);
     }
     100% {
         transform: translateX(calc(-250px * 7));
