@@ -1,10 +1,19 @@
 import React from 'react'
 import LightSpeed from 'react-reveal/LightSpeed'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faDiscord,
+    faTwitter,
+  } from "@fortawesome/free-brands-svg-icons";
 
 // import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 // import 'react-vertical-timeline-component/style.min.css';
 import ninja from '../../assets/img/template.jpeg'
+import handdrawn from '../../assets/img/handdrawn.png'
+import mktlogo from '../../assets/img/thefunnelmktlogo.jpg'
 import ninjagif from '../../assets/img/ninjas/craftyninja.gif'
+import ninja17 from '../../assets/img/ninjas/ninja17.png'
+import ninja18 from '../../assets/img/ninjas/ninja18.png'
 
 const roadmap = {
     container: {
@@ -22,9 +31,8 @@ const roadmap = {
         alignItems: 'center',
         width: '100%',
         height: '23rem',
-        margin: 'auto',
+        margin: '0rem auto 3rem',
         paddingRight: '60px',
-        backgroundColor: '#212121'
     },
     contentRight: {
         display: 'grid',
@@ -33,25 +41,31 @@ const roadmap = {
         alignItems: 'center',
         width: '100%',
         height: '25rem',
-        margin: 'auto',
+        margin: '0rem auto 3rem',
         paddingLeft: '60px',
-        backgroundColor: '#212121'
     },
     contentCenter: {
         display: 'flex',
         height: '20rem',
-        backgroundColor: '#212121',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: 'auto'
+        margin: '0rem auto 3rem'
     },
     image: {
         width: '300px',
-        height: '300px'
+        height: '300px',
+        borderRadius: '10px'
     },
     gif: {
         width: '300px',
         height: '300px'
+    },
+    logo: {
+        display: 'flex',
+        flexDirection: 'row',
+        width: '50%',
+        margin: 'auto',
+        justifyContent: 'space-between',
     }
 }
 
@@ -62,9 +76,9 @@ const Timeline = () => {
                 <p style={{textTransform: 'uppercase', color: '#FF5800'}} className='font'>Future Plans</p>
                 <h1>Road Map</h1>
             </div>    
-            <div style={{border: '2px solid #808080'}}>
+            <div>
                 {/* Content 1*/}
-                <div style={roadmap.contentLeft} className='startofContent'>
+                <div style={roadmap.contentLeft}>
                     <LightSpeed left>
                         <div>
                             <h1>0% - Planning Phase 1</h1>
@@ -76,23 +90,30 @@ const Timeline = () => {
 
                 {/* Content 2*/}
                 <div style={roadmap.contentRight}>
-                    <img src={ninja} alt='ninja' style={roadmap.image}/>
+                    <img src={handdrawn} alt='handdrawn-layers' style={roadmap.image}/>
                     <LightSpeed right>
                         <div>
                             <h1>25% - Planning Phase 2</h1>
                             <p className='font'>The beginning of hand drawing the art pieces.<br />Setting up socials, websites and marketing</p>
+                            <div style={roadmap.logo}>
+                                <FontAwesomeIcon icon={faDiscord} style={{width: '50px', height: '50px'}}/>
+                                <FontAwesomeIcon icon={faTwitter} style={{width: '50px', height: '50px'}}/>
+                                <img src={mktlogo} alt='marketing-logo' style={{width: '50px', height: '50px'}}/>
+                            </div>
                         </div>
                     </LightSpeed>
                 </div>
 
                 {/* Content 3*/}
                 <div style={roadmap.contentCenter}>
+                    <img src={ninja17} alt='ninja' style={{...roadmap.image, opacity: '30%'}} />
                     <LightSpeed left>
                         <div>
                             <h1>50% - Planning Phase 3</h1>
                             <p className='font'>Completion of artwork. <br />Planning and setting up giveaways, <br />collaboration to garner hype.</p>
                         </div>
                     </LightSpeed>
+                    <img src={ninja18} alt='ninja' style={{...roadmap.image, opacity: '30%'}} />
                 </div>
 
                 {/* Content 4*/}
@@ -107,7 +128,7 @@ const Timeline = () => {
                 </div>
 
                 {/* Content 5*/}
-                <div style={roadmap.contentRight} className='endofContent'>
+                <div style={roadmap.contentRight}>
                     <img src={ninja} alt='ninja' style={roadmap.image}/>
                     <LightSpeed left>
                         <div>

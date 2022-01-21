@@ -4,7 +4,6 @@ import React, { Fragment, useState, useEffect } from 'react'
 // import {
 //     faDiscord,
 //     faTwitter,
-//     faInstagram
 //   } from "@fortawesome/free-brands-svg-icons";
 import Countdown from 'react-countdown';
 import { Button } from '@mui/material'
@@ -69,27 +68,12 @@ const styling = {
         flexDirection: 'row',
         justifyContent: 'space-between',
         textAlign: 'center',
-        width: '80%',
+        width: '10%',
         height: '10vh',
         margin: 'auto',
         paddingTop: '50px',
         fontFamily: 'assassin'
     },
-    links: {
-        width: '30%',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        fontSize: '22px',
-    },
-    socials: {
-        width: '20%',      
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        fontFamily: 'assassin'
-    },
-
     description: {
         display: 'flex',
         flexDirection: 'column',
@@ -148,7 +132,7 @@ const team = {
         flexDirection: 'column',
         width: '80%',
         textAlign: 'center',
-        margin: '8rem auto 0rem',
+        margin: '5rem auto 0rem',
         fontFamily: 'assassin'
     },
     team: {
@@ -213,6 +197,17 @@ const mobile = {
         margin: '0rem auto 1rem',
         fontFamily: 'assassin',
         width: '80%'
+    },
+    navbar: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        textAlign: 'center',
+        width: '30%',
+        height: '10vh',
+        margin: 'auto',
+        paddingTop: '50px',
+        fontFamily: 'assassin'
     },
     countdownContainer: {
         display: 'flex',
@@ -333,19 +328,9 @@ const LandingPage = () => {
                     <div className='LPContainer'>
                         {/* Navbar */}
                         <div style={styling.navbar}>
-                            
-                            {/* Links */}
-                            <div style={styling.links}>
-                                {/* <Link to='#' style={{textDecoration: 'none', color: 'white', fontFamily: 'assassin'}}>Rarity</Link>
-                                <Link to='#' style={{textDecoration: 'none', color: 'white', fontFamily: 'assassin'}}>Mint</Link> */}
-                            </div>
-
                             {/* Socials */}
-                            <div style={styling.socials}>
                                 {/* <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faDiscord} size='2x'/></a>
-                                <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faInstagram} size='2x'/></a>
                                 <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faTwitter} size='2x'/></a> */}
-                            </div>
                         </div>
 
                         {/* Header */}
@@ -431,10 +416,10 @@ const LandingPage = () => {
                         <Timeline />
 
                         {/* Utilities Section */}
-                        <div style={utilities.container}>
+                        {/* <div style={utilities.container}>
                             <p className='font' style={{color: '#DC143C'}}>Giving Back</p>
                             <h1 style={{fontFamily: 'assassin'}}>Utilities</h1>
-                        </div>
+                        </div> */}
 
                         {/* Team Section */}
                         <div style={team.container}>
@@ -514,20 +499,10 @@ const LandingPage = () => {
                 <div style={mobile.pageContainer}>
                     <div className='LPContainer'>
                         {/* Navbar */}
-                        <div style={styling.navbar}>
-                            
-                            {/* Links */}
-                            <div style={styling.links}>
-                                {/* <Link to='#' style={{textDecoration: 'none', color: 'white', fontFamily: 'assassin'}}>Rarity</Link>
-                                <Link to='#' style={{textDecoration: 'none', color: 'white', fontFamily: 'assassin'}}>Mint</Link> */}
-                            </div>
-
+                        <div style={mobile.navbar}>
                             {/* Socials */}
-                            <div style={styling.socials}>
                                 {/* <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faDiscord} size='2x'/></a>
-                                <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faInstagram} size='2x'/></a>
                                 <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faTwitter} size='2x'/></a> */}
-                            </div>
                         </div>
 
                         {/* Header */}
