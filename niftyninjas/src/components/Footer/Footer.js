@@ -20,7 +20,7 @@ const Footer = () => {
     return (
         <footer className="footer" style={footer.container}>
             <div style={footer.copyright} className='font'>
-            © {new Date().getFullYear()}, Designed by Nifty Ninjas Dev Team. All Rights Reserved.
+            © {new Date().getFullYear()}, Designed by Crafty Ninjas Dev Team. All Rights Reserved.
             </div>
         </footer>
     )

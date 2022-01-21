@@ -23,11 +23,6 @@ import ninja4 from '../../assets/img/ninjas/ninja4.png'
 import ninja5 from '../../assets/img/ninjas/ninja5.png'
 import ninja6 from '../../assets/img/ninjas/ninja6.png'
 import ninja7 from '../../assets/img/ninjas/ninja7.png'
-import ninja8 from '../../assets/img/ninjas/ninja8.png'
-import ninja9 from '../../assets/img/ninjas/ninja9.png'
-import ninja10 from '../../assets/img/ninjas/ninja10.png'
-import ninja11 from '../../assets/img/ninjas/ninja11.png'
-import ninja12 from '../../assets/img/ninjas/ninja12.png'
 import dev1 from '../../assets/img/ninjas/dev1.png'
 import dev2 from '../../assets/img/ninjas/dev2.png'
 import dev3 from '../../assets/img/ninjas/dev3.png'
@@ -337,7 +332,7 @@ const LandingPage = () => {
                         <div style={styling.header}>
                             <div style={styling.heading}>
                                 <Bounce bottom>
-                                    <h1 style={{marginBottom: '25px', fontSize: '90px', fontFamily: 'assassin'}}>Nifty Ninjas</h1>
+                                    <h1 style={{marginBottom: '25px', fontSize: '90px', fontFamily: 'assassin'}}>Crafty Ninjas</h1>
                                     {/* <p>369 Ninjas hiding in the shadow</p> */}
                                     <p style={{fontFamily: 'assassin'}}>Are you worthy enough to catch it?</p>
                                 </Bounce>    
@@ -353,7 +348,7 @@ const LandingPage = () => {
 
                         <div style={styling.description}>
                             <p style={{color: '#FFA700'}} className='font'>STEALTH AND PRECISION</p>
-                            <p style={{fontSize: '48px', marginBottom: '30px', fontFamily: 'assassin'}}>Nifty Ninjas</p>
+                            <p style={{fontSize: '48px', marginBottom: '30px', fontFamily: 'assassin'}}>Crafty Ninjas</p>
                             <Fade left>
                                 <p className='font' style={{marginBottom: '0px'}}>Supply of Shinobis kept low, stealth and precision. All with a strong secondary
                                 market in mind.
@@ -509,7 +504,7 @@ const LandingPage = () => {
                         <div style={mobile.header}>
                             <div style={mobile.heading}>
                                 <Bounce bottom>
-                                    <h1 style={{marginBottom: '25px', fontSize: '80px', fontFamily: 'assassin'}}>Nifty Ninjas</h1>
+                                    <h1 style={{marginBottom: '25px', fontSize: '80px', fontFamily: 'assassin'}}>Crafty Ninjas</h1>
                                     {/* <p>369 Ninjas hiding in the shadow</p> */}
                                     <p style={{fontFamily: 'assassin'}}>Are you worthy enough to catch it?</p>
                                 </Bounce>    
@@ -525,7 +520,7 @@ const LandingPage = () => {
 
                         <div style={mobile.aboutDescription}>
                             <p style={{color: '#FFA700'}} className='font'>STEALTH AND PRECISION</p>
-                            <p style={{fontSize: '48px', marginBottom: '30px', fontFamily: 'assassin'}}>Nifty Ninjas</p>
+                            <p style={{fontSize: '48px', marginBottom: '30px', fontFamily: 'assassin'}}>Crafty Ninjas</p>
                             <Fade left>
                                 <p className='font' style={{marginBottom: '0px'}}>Supply of Shinobis kept low, stealth and precision. All with a strong secondary
                                 market in mind.
