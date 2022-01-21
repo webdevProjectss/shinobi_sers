@@ -389,25 +389,25 @@ const LandingPage = () => {
 
 
                                 <div className='slide'>
-                                    <img src={ninja8} alt='ninja8' className='image'/>
-                                </div>
-                                <div className='slide'>
-                                    <img src={ninja9} alt='ninja9' className='image'/>
-                                </div>
-                                <div className='slide'>
-                                    <img src={ninja10} alt='ninja10' className='image'/>
-                                </div>
-                                <div className='slide'>
-                                    <img src={ninja11} alt='ninja11' className='image'/>
-                                </div>
-                                <div className='slide'>
-                                    <img src={ninja12} alt='ninja12' className='image'/>
-                                </div>
-                                <div className='slide'>
                                     <img src={ninja1} alt='ninja1' className='image'/>
                                 </div>
                                 <div className='slide'>
                                     <img src={ninja2} alt='ninja2' className='image'/>
+                                </div>
+                                <div className='slide'>
+                                    <img src={ninja3} alt='ninja3' className='image'/>
+                                </div>
+                                <div className='slide'>
+                                    <img src={ninja4} alt='ninja4' className='image'/>
+                                </div>
+                                <div className='slide'>
+                                    <img src={ninja5} alt='ninja5' className='image'/>
+                                </div>
+                                <div className='slide'>
+                                    <img src={ninja6} alt='ninja6' className='image'/>
+                                </div>
+                                <div className='slide'>
+                                    <img src={ninja7} alt='ninja7' className='image'/>
                                 </div>
                             </div>
                         </div>
@@ -561,25 +561,25 @@ const LandingPage = () => {
 
 
                                 <div className='slide'>
-                                    <img src={ninja8} alt='ninja8' className='image'/>
-                                </div>
-                                <div className='slide'>
-                                    <img src={ninja9} alt='ninja9' className='image'/>
-                                </div>
-                                <div className='slide'>
-                                    <img src={ninja10} alt='ninja10' className='image'/>
-                                </div>
-                                <div className='slide'>
-                                    <img src={ninja11} alt='ninja11' className='image'/>
-                                </div>
-                                <div className='slide'>
-                                    <img src={ninja12} alt='ninja12' className='image'/>
-                                </div>
-                                <div className='slide'>
                                     <img src={ninja1} alt='ninja1' className='image'/>
                                 </div>
                                 <div className='slide'>
                                     <img src={ninja2} alt='ninja2' className='image'/>
+                                </div>
+                                <div className='slide'>
+                                    <img src={ninja3} alt='ninja3' className='image'/>
+                                </div>
+                                <div className='slide'>
+                                    <img src={ninja4} alt='ninja4' className='image'/>
+                                </div>
+                                <div className='slide'>
+                                    <img src={ninja5} alt='ninja5' className='image'/>
+                                </div>
+                                <div className='slide'>
+                                    <img src={ninja6} alt='ninja6' className='image'/>
+                                </div>
+                                <div className='slide'>
+                                    <img src={ninja7} alt='ninja7' className='image'/>
                                 </div>
                             </div>
                         </div>
