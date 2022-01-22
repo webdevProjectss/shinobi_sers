@@ -1,14 +1,17 @@
 import React from 'react'
 import LightSpeed from 'react-reveal/LightSpeed'
+import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faDiscord,
     faTwitter,
   } from "@fortawesome/free-brands-svg-icons";
+import { faBoxOpen } from '@fortawesome/free-solid-svg-icons'
+import { faTags } from '@fortawesome/free-solid-svg-icons'
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 
 // import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 // import 'react-vertical-timeline-component/style.min.css';
-import ninja from '../../assets/img/template.jpeg'
 import handdrawn from '../../assets/img/handdrawn.png'
 import mktlogo from '../../assets/img/thefunnelmktlogo.jpg'
 import ninjagif from '../../assets/img/ninjas/craftyninja.gif'
@@ -32,7 +35,7 @@ const roadmap = {
         alignItems: 'center',
         width: '80%',
         height: '23rem',
-        margin: '0rem auto 3rem',
+        margin: '0rem auto 8rem',
         paddingRight: '60px',
     },
     contentRight: {
@@ -42,7 +45,7 @@ const roadmap = {
         alignItems: 'center',
         width: '80%',
         height: '25rem',
-        margin: '0rem auto 3rem',
+        margin: '0rem auto 8rem',
         paddingLeft: '60px',
     },
     contentCenter: {
@@ -50,7 +53,8 @@ const roadmap = {
         height: '20rem',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: '0rem auto 3rem'
+        margin: '0rem auto 8rem',
+        width: '80%',
     },
     image: {
         width: '300px',
@@ -67,6 +71,21 @@ const roadmap = {
         width: '50%',
         margin: 'auto',
         justifyContent: 'space-between',
+    },
+    CDContainer: {
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr 1fr',
+        width: '60%',
+        gap: '20px'
+    },
+    CD: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: 'auto',
+        gap: '5px',
+        // backgroundColor: '#41424C',
+        // padding: '5px 0px 15px',
     }
 }
 
@@ -79,14 +98,32 @@ const Timeline = () => {
             </div>    
             <div>
                 {/* Content 1*/}
-                <div style={roadmap.contentLeft}>
+                <div style={{...roadmap.contentCenter, flexDirection: 'column'}}>
                     <LightSpeed left>
-                        <div>
+                        <div style={{margin: '5rem 0rem 3rem'}}>
                             <h1>0% - Planning Phase 1</h1>
                             <p className='font'>Deciding on the supply size, mint price/date, <br />art style and secondary market</p>
                         </div>
                     </LightSpeed>
-                    <img src={ninja} alt='ninja' style={roadmap.image}/>
+                    <Fade bottom>
+                        <div style={roadmap.CDContainer}>
+                            <div style={roadmap.CD}>
+                                <span style={{fontSize: '24px'}} className='font'>669</span>
+                                <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Supply</span>
+                                <FontAwesomeIcon icon={faBoxOpen} size='2x'/>
+                            </div>
+                            <div style={roadmap.CD}>
+                                <span style={{fontSize: '24px'}} className='font'>1 SOL</span>
+                                <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Mint Price</span>
+                                <FontAwesomeIcon icon={faTags} size='2x'/>
+                            </div>
+                            <div style={roadmap.CD}>
+                                <span style={{fontSize: '24px'}} className='font'>22 Jan -- 2pm UTC</span>
+                                <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Mint Date and Time</span>
+                                <FontAwesomeIcon icon={faCalendarAlt} size='2x'/>
+                            </div>
+                        </div>
+                    </Fade>
                 </div>
 
                 {/* Content 2*/}
@@ -129,10 +166,9 @@ const Timeline = () => {
                 </div>
 
                 {/* Content 5*/}
-                <div style={roadmap.contentRight}>
-                    <img src={ninja} alt='ninja' style={roadmap.image}/>
+                <div style={roadmap.contentCenter}>
                     <LightSpeed left>
-                        <div>
+                        <div style={{marginBottom: '8rem'}}>
                             <h1>100% - Post Mint Phase</h1>
                             <p className='font'>Continue to market to support secondary market transactions. <br />Completion of utilities for holders of Nifty Ninjas <br/> - Full detail of our utilities can be found below.</p>
                         </div>

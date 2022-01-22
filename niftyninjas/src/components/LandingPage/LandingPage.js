@@ -110,16 +110,16 @@ const countdown = {
     }
 }
 
-
-const utilities = {
-    container: {
-        display: 'flex',
-        flexDirection: 'column',
-        width: '80%',
-        textAlign: 'center',
-        margin: '8rem auto 0rem'
-    }
-}
+// const utilities = {
+//     container: {
+//         display: 'flex',
+//         flexDirection: 'column',
+//         width: '80%',
+//         textAlign: 'center',
+//         margin: '5rem auto 0rem',
+//         fontFamily: 'assassin'
+//     }
+// }
 
 const team = {
     container: {
@@ -583,10 +583,10 @@ const LandingPage = () => {
                         {/* <Timeline /> */}
 
                         {/* Utilities Section */}
-                        <div style={utilities.container}>
+                        {/* <div style={utilities.container}>
                             <p className='font' style={{color: '#DC143C'}}>Giving Back</p>
                             <h1 style={{fontFamily: 'assassin'}}>Utilities</h1>
-                        </div>
+                        </div> */}
 
                         {/* Team Section */}
                         <div style={mobile.teamContainer}>
