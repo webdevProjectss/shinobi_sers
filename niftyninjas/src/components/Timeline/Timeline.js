@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import LightSpeed from 'react-reveal/LightSpeed'
 import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -37,6 +37,7 @@ const roadmap = {
         height: '23rem',
         margin: '0rem auto 8rem',
         paddingRight: '60px',
+        maxWidth: '1500px'
     },
     contentRight: {
         display: 'grid',
@@ -47,6 +48,7 @@ const roadmap = {
         height: '25rem',
         margin: '0rem auto 8rem',
         paddingLeft: '60px',
+        maxWidth: '1500px'
     },
     contentCenter: {
         display: 'flex',
@@ -55,6 +57,7 @@ const roadmap = {
         alignItems: 'center',
         margin: '0rem auto 8rem',
         width: '80%',
+        maxWidth: '1500px'
     },
     image: {
         width: '300px',
@@ -90,94 +93,215 @@ const roadmap = {
 }
 
 const Timeline = () => {
-    return (        
-        <div style={roadmap.container}>
-            <div style={{marginTop: '3rem', marginBottom: '20px'}}>
-                <p style={{textTransform: 'uppercase', color: '#FF5800'}} className='font'>Future Plans</p>
-                <h1>Road Map</h1>
-            </div>    
-            <div>
-                {/* Content 1*/}
-                <div style={{...roadmap.contentCenter, flexDirection: 'column'}}>
-                    <LightSpeed left>
-                        <div style={{margin: '5rem 0rem 3rem'}}>
-                            <h1>0% - Planning Phase 1</h1>
-                            <p className='font'>Deciding on the supply size, mint price/date, <br />art style and secondary market</p>
-                        </div>
-                    </LightSpeed>
-                    <Fade bottom>
-                        <div style={roadmap.CDContainer}>
-                            <div style={roadmap.CD}>
-                                <span style={{fontSize: '24px'}} className='font'>669</span>
-                                <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Supply</span>
-                                <FontAwesomeIcon icon={faBoxOpen} size='2x'/>
-                            </div>
-                            <div style={roadmap.CD}>
-                                <span style={{fontSize: '24px'}} className='font'>1 SOL</span>
-                                <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Mint Price</span>
-                                <FontAwesomeIcon icon={faTags} size='2x'/>
-                            </div>
-                            <div style={roadmap.CD}>
-                                <span style={{fontSize: '24px'}} className='font'>22 Jan -- 2pm UTC</span>
-                                <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Mint Date and Time</span>
-                                <FontAwesomeIcon icon={faCalendarAlt} size='2x'/>
-                            </div>
-                        </div>
-                    </Fade>
-                </div>
 
-                {/* Content 2*/}
-                <div style={roadmap.contentRight}>
-                    <img src={handdrawn} alt='handdrawn-layers' style={roadmap.image}/>
-                    <LightSpeed right>
-                        <div>
-                            <h1>25% - Planning Phase 2</h1>
-                            <p className='font'>The beginning of hand drawing the art pieces.<br />Setting up socials, websites and marketing</p>
-                            <div style={roadmap.logo}>
-                                <FontAwesomeIcon icon={faDiscord} style={{width: '50px', height: '50px'}}/>
-                                <FontAwesomeIcon icon={faTwitter} style={{width: '50px', height: '50px'}}/>
-                                <img src={mktlogo} alt='marketing-logo' style={{width: '50px', height: '50px'}}/>
+    const [state, setState] = useState({
+        mobileView: false,
+        });
+
+        const { mobileView } = state;
+
+        useEffect(() => {
+        const setResponsiveness = () => {
+            return window.innerWidth < 1050
+            ? setState((prevState) => ({ ...prevState, mobileView: true }))
+            : setState((prevState) => ({ ...prevState, mobileView: false }));
+        };
+
+        setResponsiveness();
+        window.addEventListener("resize", () => setResponsiveness());
+
+        return () => {
+            window.removeEventListener("resize", () => setResponsiveness());
+        }
+        }, []);
+
+    const displayDesktop = () => {
+        return (        
+            <div style={roadmap.container}>
+                <div style={{marginTop: '3rem', marginBottom: '20px'}}>
+                    <p style={{textTransform: 'uppercase', color: '#FF5800'}} className='font'>Future Plans</p>
+                    <h1>Road Map</h1>
+                </div>    
+                <div>
+                    {/* Content 1*/}
+                    <div style={{...roadmap.contentCenter, flexDirection: 'column'}}>
+                        <LightSpeed left>
+                            <div style={{margin: '5rem 0rem 3rem'}}>
+                                <h1>0% - Planning Phase 1</h1>
+                                <p className='font'>Deciding on the supply size, mint price/date, <br />art style and secondary market</p>
                             </div>
-                        </div>
-                    </LightSpeed>
-                </div>
-
-                {/* Content 3*/}
-                <div style={roadmap.contentCenter}>
-                    <img src={ninja17} alt='ninja' style={{...roadmap.image, opacity: '30%'}} />
-                    <LightSpeed left>
-                        <div>
-                            <h1>50% - Planning Phase 3</h1>
-                            <p className='font'>Completion of artwork. <br />Planning and setting up giveaways, <br />collaboration to garner hype.</p>
-                        </div>
-                    </LightSpeed>
-                    <img src={ninja18} alt='ninja' style={{...roadmap.image, opacity: '30%'}} />
-                </div>
-
-                {/* Content 4*/}
-                <div style={roadmap.contentLeft}>
-                    <LightSpeed left>
-                        <div>
-                            <h1>75% - Minting Phase</h1>
-                            <p className='font'>Beginning of Minting <br />Continue to market, do giveaways and collaborations. <br />Start to code post-mint utilities for the community</p>
-                        </div>
-                    </LightSpeed>
-                    <img src={ninjagif} alt='ninjagif' style={roadmap.gif}/>
-                </div>
-
-                {/* Content 5*/}
-                <div style={roadmap.contentCenter}>
-                    <LightSpeed left>
-                        <div style={{marginBottom: '8rem'}}>
-                            <h1>100% - Post Mint Phase</h1>
-                            <p className='font'>Continue to market to support secondary market transactions. <br />Completion of utilities for holders of Nifty Ninjas <br/> - Full detail of our utilities can be found below.</p>
-                        </div>
-                    </LightSpeed>
+                        </LightSpeed>
+                        <Fade bottom>
+                            <div style={roadmap.CDContainer}>
+                                <div style={roadmap.CD}>
+                                    <span style={{fontSize: '24px'}} className='font'>669</span>
+                                    <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Supply</span>
+                                    <FontAwesomeIcon icon={faBoxOpen} size='2x'/>
+                                </div>
+                                <div style={roadmap.CD}>
+                                    <span style={{fontSize: '24px'}} className='font'>1 SOL</span>
+                                    <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Mint Price</span>
+                                    <FontAwesomeIcon icon={faTags} size='2x'/>
+                                </div>
+                                <div style={roadmap.CD}>
+                                    <span style={{fontSize: '24px'}} className='font'>22 Jan -- 2pm UTC</span>
+                                    <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Mint Date and Time</span>
+                                    <FontAwesomeIcon icon={faCalendarAlt} size='2x'/>
+                                </div>
+                            </div>
+                        </Fade>
+                    </div>
+    
+                    {/* Content 2*/}
+                    <div style={roadmap.contentRight}>
+                        <img src={handdrawn} alt='handdrawn-layers' style={roadmap.image}/>
+                        <LightSpeed right>
+                            <div>
+                                <h1>25% - Planning Phase 2</h1>
+                                <p className='font'>The beginning of hand drawing the art pieces.<br />Setting up socials, websites and marketing</p>
+                                <div style={roadmap.logo}>
+                                    <FontAwesomeIcon icon={faDiscord} style={{width: '50px', height: '50px'}}/>
+                                    <FontAwesomeIcon icon={faTwitter} style={{width: '50px', height: '50px'}}/>
+                                    <img src={mktlogo} alt='marketing-logo' style={{width: '50px', height: '50px'}}/>
+                                </div>
+                            </div>
+                        </LightSpeed>
+                    </div>
+    
+                    {/* Content 3*/}
+                    <div style={roadmap.contentCenter}>
+                        <img src={ninja17} alt='ninja' style={{...roadmap.image, opacity: '30%'}} />
+                        <LightSpeed left>
+                            <div>
+                                <h1>50% - Planning Phase 3</h1>
+                                <p className='font'>Completion of artwork. <br />Planning and setting up giveaways, <br />collaboration to garner hype.</p>
+                            </div>
+                        </LightSpeed>
+                        <img src={ninja18} alt='ninja' style={{...roadmap.image, opacity: '30%'}} />
+                    </div>
+    
+                    {/* Content 4*/}
+                    <div style={roadmap.contentLeft}>
+                        <LightSpeed left>
+                            <div>
+                                <h1>75% - Minting Phase</h1>
+                                <p className='font'>Beginning of Minting <br />Continue to market, do giveaways and collaborations. <br />Start to code post-mint utilities for the community</p>
+                            </div>
+                        </LightSpeed>
+                        <img src={ninjagif} alt='ninjagif' style={roadmap.gif}/>
+                    </div>
+    
+                    {/* Content 5*/}
+                    <div style={roadmap.contentCenter}>
+                        <LightSpeed left>
+                            <div style={{marginBottom: '8rem'}}>
+                                <h1>100% - Post Mint Phase</h1>
+                                <p className='font'>Continue to market to support secondary market transactions. <br />Completion of utilities for holders of Nifty Ninjas <br/> - Full detail of our utilities can be found below.</p>
+                            </div>
+                        </LightSpeed>
+                    </div>
                 </div>
             </div>
-        </div>
+        )
+    }
 
+
+    const displayMobile = () => {
+        return (        
+            <div style={roadmap.container}>
+                <div style={{marginTop: '3rem', marginBottom: '20px'}}>
+                    <p style={{textTransform: 'uppercase', color: '#FF5800'}} className='font'>Future Plans</p>
+                    <h1>Road Map</h1>
+                </div>    
+                <div>
+                    {/* Content 1*/}
+                    <div style={{...roadmap.contentCenter, flexDirection: 'column'}}>
+                        <LightSpeed left>
+                            <div style={{margin: '5rem 0rem 3rem'}}>
+                                <h1>0% - Planning Phase 1</h1>
+                                <p className='font'>Deciding on the supply size, mint price/date, <br />art style and secondary market</p>
+                            </div>
+                        </LightSpeed>
+                        <Fade bottom>
+                            <div style={roadmap.CDContainer}>
+                                <div style={roadmap.CD}>
+                                    <span style={{fontSize: '24px'}} className='font'>669</span>
+                                    <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Supply</span>
+                                    <FontAwesomeIcon icon={faBoxOpen} size='2x'/>
+                                </div>
+                                <div style={roadmap.CD}>
+                                    <span style={{fontSize: '24px'}} className='font'>1 SOL</span>
+                                    <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Mint Price</span>
+                                    <FontAwesomeIcon icon={faTags} size='2x'/>
+                                </div>
+                                <div style={roadmap.CD}>
+                                    <span style={{fontSize: '24px'}} className='font'>22 Jan -- 2pm UTC</span>
+                                    <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Mint Date and Time</span>
+                                    <FontAwesomeIcon icon={faCalendarAlt} size='2x'/>
+                                </div>
+                            </div>
+                        </Fade>
+                    </div>
+    
+                    {/* Content 2*/}
+                    <div style={roadmap.contentRight}>
+                        <img src={handdrawn} alt='handdrawn-layers' style={roadmap.image}/>
+                        <LightSpeed right>
+                            <div>
+                                <h1>25% - Planning Phase 2</h1>
+                                <p className='font'>The beginning of hand drawing the art pieces.<br />Setting up socials, websites and marketing</p>
+                                <div style={roadmap.logo}>
+                                    <FontAwesomeIcon icon={faDiscord} style={{width: '50px', height: '50px'}}/>
+                                    <FontAwesomeIcon icon={faTwitter} style={{width: '50px', height: '50px'}}/>
+                                    <img src={mktlogo} alt='marketing-logo' style={{width: '50px', height: '50px'}}/>
+                                </div>
+                            </div>
+                        </LightSpeed>
+                    </div>
+    
+                    {/* Content 3*/}
+                    <div style={roadmap.contentCenter}>
+                        <img src={ninja17} alt='ninja' style={{...roadmap.image, opacity: '30%'}} />
+                        <LightSpeed left>
+                            <div>
+                                <h1>50% - Planning Phase 3</h1>
+                                <p className='font'>Completion of artwork. <br />Planning and setting up giveaways, <br />collaboration to garner hype.</p>
+                            </div>
+                        </LightSpeed>
+                        <img src={ninja18} alt='ninja' style={{...roadmap.image, opacity: '30%'}} />
+                    </div>
+    
+                    {/* Content 4*/}
+                    <div style={roadmap.contentLeft}>
+                        <LightSpeed left>
+                            <div>
+                                <h1>75% - Minting Phase</h1>
+                                <p className='font'>Beginning of Minting <br />Continue to market, do giveaways and collaborations. <br />Start to code post-mint utilities for the community</p>
+                            </div>
+                        </LightSpeed>
+                        <img src={ninjagif} alt='ninjagif' style={roadmap.gif}/>
+                    </div>
+    
+                    {/* Content 5*/}
+                    <div style={roadmap.contentCenter}>
+                        <LightSpeed left>
+                            <div style={{marginBottom: '8rem'}}>
+                                <h1>100% - Post Mint Phase</h1>
+                                <p className='font'>Continue to market to support secondary market transactions. <br />Completion of utilities for holders of Nifty Ninjas <br/> - Full detail of our utilities can be found below.</p>
+                            </div>
+                        </LightSpeed>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    return (
+        <Fragment>
+            {mobileView ? displayMobile() : displayDesktop()}
+        </Fragment>
     )
+
 }
 
 export default Timeline

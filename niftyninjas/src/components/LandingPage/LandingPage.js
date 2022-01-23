@@ -32,7 +32,7 @@ const styling = {
     pageContainer: {
         backgroundColor: 'black',
         height: '100vh',
-        color: 'white'
+        color: 'white',
     },
     header: {
         display: 'flex',
@@ -42,6 +42,7 @@ const styling = {
         height: '86vh',
         lineHeight: '30px',
         margin: '0rem auto 0rem',
+        maxWidth: '1500px'
     },
     countdown: {
         fontSize: '20px',
@@ -76,7 +77,8 @@ const styling = {
         textAlign: 'center',
         width: '40%',
         margin: '0px auto 5rem',
-        lineHeight: '40px'
+        lineHeight: '40px',
+        maxWidth: '1500px'
     }
 }
 
@@ -128,7 +130,7 @@ const team = {
         width: '80%',
         textAlign: 'center',
         margin: '5rem auto 0rem',
-        fontFamily: 'assassin'
+        fontFamily: 'assassin',
     },
     team: {
         display: 'flex',
@@ -292,7 +294,7 @@ const LandingPage = () => {
     
       useEffect(() => {
         const setResponsiveness = () => {
-          return window.innerWidth < 1200
+          return window.innerWidth < 1050
             ? setState((prevState) => ({ ...prevState, mobileView: true }))
             : setState((prevState) => ({ ...prevState, mobileView: false }));
         };
