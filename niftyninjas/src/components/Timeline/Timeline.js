@@ -1,22 +1,23 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import LightSpeed from 'react-reveal/LightSpeed'
-import Fade from 'react-reveal/Fade';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faDiscord,
-    faTwitter,
-  } from "@fortawesome/free-brands-svg-icons";
-import { faBoxOpen } from '@fortawesome/free-solid-svg-icons'
-import { faTags } from '@fortawesome/free-solid-svg-icons'
-import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+// import Fade from 'react-reveal/Fade';
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//     faDiscord,
+//     faTwitter,
+//   } from "@fortawesome/free-brands-svg-icons";
+// import { faBoxOpen } from '@fortawesome/free-solid-svg-icons'
+// import { faTags } from '@fortawesome/free-solid-svg-icons'
+// import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 
 // import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 // import 'react-vertical-timeline-component/style.min.css';
 import handdrawn from '../../assets/img/handdrawn.png'
-import mktlogo from '../../assets/img/thefunnelmktlogo.jpg'
-import ninjagif from '../../assets/img/ninjas/craftyninja.gif'
+// import mktlogo from '../../assets/img/thefunnelmktlogo.jpg'
+// import ninjagif from '../../assets/img/ninjas/craftyninja.gif'
 import ninja17 from '../../assets/img/ninjas/ninja17.png'
 import ninja18 from '../../assets/img/ninjas/ninja18.png'
+// import comingsoon from '../../assets/img/comingsoon.png'
 
 const roadmap = {
     container: {
@@ -28,17 +29,6 @@ const roadmap = {
         margin: '5rem auto 0rem',
         backgroundColor: '#0f0f0f'
     },
-    contentLeft: {
-        display: 'grid',
-        gridTemplateColumns: '2fr 1fr',
-        justifyItems: 'center',
-        alignItems: 'center',
-        width: '80%',
-        height: '23rem',
-        margin: '0rem auto 8rem',
-        paddingRight: '60px',
-        maxWidth: '1500px'
-    },
     contentRight: {
         display: 'grid',
         gridTemplateColumns: '1fr 2fr',
@@ -48,7 +38,8 @@ const roadmap = {
         height: '25rem',
         margin: '0rem auto 8rem',
         paddingLeft: '60px',
-        maxWidth: '1500px'
+        maxWidth: '1500px',
+        lineHeight: '2rem'
     },
     contentCenter: {
         display: 'flex',
@@ -57,7 +48,8 @@ const roadmap = {
         alignItems: 'center',
         margin: '0rem auto 8rem',
         width: '80%',
-        maxWidth: '1500px'
+        maxWidth: '1500px',
+        lineHeight: '2rem'
     },
     image: {
         width: '300px',
@@ -66,7 +58,8 @@ const roadmap = {
     },
     gif: {
         width: '300px',
-        height: '300px'
+        height: '300px',
+        borderRadius: '10px'
     },
     logo: {
         display: 'flex',
@@ -89,7 +82,48 @@ const roadmap = {
         gap: '5px',
         // backgroundColor: '#41424C',
         // padding: '5px 0px 15px',
-    }
+    },
+}
+
+const mobile = {
+    container: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        textAlign: 'center',
+        backgroundColor: '#0f0f0f',
+        margin: '5rem auto 0rem'
+    },
+    content: {
+        margin: '0rem auto 8rem',
+        lineHeight: '2rem'
+    },
+    image: {
+        width: '300px',
+        height: '300px',
+        borderRadius: '10px'
+    },
+    gif: {
+        width: '300px',
+        height: '300px'
+    },
+    logo: {
+        display: 'flex',
+        flexDirection: 'row',
+        width: '50%',
+        margin: '25px auto 0rem',
+        justifyContent: 'space-between',
+    },
+    CD: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: '60%',
+        margin: '0rem auto 1rem',
+        backgroundColor: '#41424C',
+        padding: '5px 0px 15px',
+        borderRadius: '15px'
+    },
 }
 
 const Timeline = () => {
@@ -117,53 +151,40 @@ const Timeline = () => {
 
     const displayDesktop = () => {
         return (        
-            <div style={roadmap.container}>
+            <div id='roadmap' style={roadmap.container}>
                 <div style={{marginTop: '3rem', marginBottom: '20px'}}>
                     <p style={{textTransform: 'uppercase', color: '#FF5800'}} className='font'>Future Plans</p>
                     <h1>Road Map</h1>
                 </div>    
                 <div>
                     {/* Content 1*/}
-                    <div style={{...roadmap.contentCenter, flexDirection: 'column'}}>
+                    <div style={roadmap.contentRight}>
                         <LightSpeed left>
+                            <img src={handdrawn} alt='handdrawn-layers' style={roadmap.image}/>
                             <div style={{margin: '5rem 0rem 3rem'}}>
-                                <h1>0% - Planning Phase 1</h1>
-                                <p className='font'>Deciding on the supply size, mint price/date, <br />art style and secondary market</p>
+                                <h1>Prelaunch</h1>
+                                <p className='font'>• Build a strong, close knit community<br/>
+                                • 444 deflationary Shinobis drawn<br/>
+                                • Targeted marketing in DAO chats<br/>
+                                • Strong Focus on Alpha Discussions<br/>
+                                • Application to ME launch (Requires dox to Katte, ME's admin)<br/>
+                                </p>
                             </div>
                         </LightSpeed>
-                        <Fade bottom>
-                            <div style={roadmap.CDContainer}>
-                                <div style={roadmap.CD}>
-                                    <span style={{fontSize: '24px'}} className='font'>669</span>
-                                    <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Supply</span>
-                                    <FontAwesomeIcon icon={faBoxOpen} size='2x'/>
-                                </div>
-                                <div style={roadmap.CD}>
-                                    <span style={{fontSize: '24px'}} className='font'>1 SOL</span>
-                                    <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Mint Price</span>
-                                    <FontAwesomeIcon icon={faTags} size='2x'/>
-                                </div>
-                                <div style={roadmap.CD}>
-                                    <span style={{fontSize: '24px'}} className='font'>22 Jan -- 2pm UTC</span>
-                                    <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Mint Date and Time</span>
-                                    <FontAwesomeIcon icon={faCalendarAlt} size='2x'/>
-                                </div>
-                            </div>
-                        </Fade>
                     </div>
     
                     {/* Content 2*/}
-                    <div style={roadmap.contentRight}>
-                        <img src={handdrawn} alt='handdrawn-layers' style={roadmap.image}/>
+                    <div style={roadmap.contentCenter}>
+                        
                         <LightSpeed right>
                             <div>
-                                <h1>25% - Planning Phase 2</h1>
-                                <p className='font'>The beginning of hand drawing the art pieces.<br />Setting up socials, websites and marketing</p>
-                                <div style={roadmap.logo}>
-                                    <FontAwesomeIcon icon={faDiscord} style={{width: '50px', height: '50px'}}/>
-                                    <FontAwesomeIcon icon={faTwitter} style={{width: '50px', height: '50px'}}/>
-                                    <img src={mktlogo} alt='marketing-logo' style={{width: '50px', height: '50px'}}/>
-                                </div>
+                                <h1>Completion of Mint</h1>
+                                <p className='font'>
+                                • List on Magic Eden<br/>
+                                • List on Moon Rank<br/>
+                                • Sweep floor with royalties and funds from mint<br/>
+                                • Continued influencer marketing and shilling<br/>
+                                </p>
                             </div>
                         </LightSpeed>
                     </div>
@@ -173,30 +194,29 @@ const Timeline = () => {
                         <img src={ninja17} alt='ninja' style={{...roadmap.image, opacity: '30%'}} />
                         <LightSpeed left>
                             <div>
-                                <h1>50% - Planning Phase 3</h1>
-                                <p className='font'>Completion of artwork. <br />Planning and setting up giveaways, <br />collaboration to garner hype.</p>
+                                <h1>Post Launch DAO</h1>
+                                <p className='font'>
+                                • Community voting for raids and influencers shills<br/>
+                                • Exclusive Alpha Discussions only for holders<br/>
+                                • Possible alpha-inclusion with other DAOs that will return royalties to holders<br/>
+                                • Possible staking for governance token<br/>
+                                </p>
                             </div>
                         </LightSpeed>
                         <img src={ninja18} alt='ninja' style={{...roadmap.image, opacity: '30%'}} />
                     </div>
     
                     {/* Content 4*/}
-                    <div style={roadmap.contentLeft}>
-                        <LightSpeed left>
-                            <div>
-                                <h1>75% - Minting Phase</h1>
-                                <p className='font'>Beginning of Minting <br />Continue to market, do giveaways and collaborations. <br />Start to code post-mint utilities for the community</p>
-                            </div>
-                        </LightSpeed>
-                        <img src={ninjagif} alt='ninjagif' style={roadmap.gif}/>
-                    </div>
-    
-                    {/* Content 5*/}
                     <div style={roadmap.contentCenter}>
                         <LightSpeed left>
-                            <div style={{marginBottom: '8rem'}}>
-                                <h1>100% - Post Mint Phase</h1>
-                                <p className='font'>Continue to market to support secondary market transactions. <br />Completion of utilities for holders of Nifty Ninjas <br/> - Full detail of our utilities can be found below.</p>
+                            <div>
+                                <h1>Utility Tools Ideas</h1>
+                                <p className='font'>
+                                • Exploring exclusive utility tools for holders<br/>
+                                • Data insights for ME page either through Tableau or Google extension<br/>
+                                • Categorisation of upcoming plays based on historical data<br/>
+                                • Information portal for beginners, contributed by experienced DAO members<br/>
+                                </p>
                             </div>
                         </LightSpeed>
                     </div>
@@ -208,86 +228,70 @@ const Timeline = () => {
 
     const displayMobile = () => {
         return (        
-            <div style={roadmap.container}>
-                <div style={{marginTop: '3rem', marginBottom: '20px'}}>
+            <div id='roadmap' style={mobile.container}>
+                <div style={{marginTop: '2rem'}}>
                     <p style={{textTransform: 'uppercase', color: '#FF5800'}} className='font'>Future Plans</p>
-                    <h1>Road Map</h1>
+                    <h1 style={{marginBottom: '5rem'}}>Road Map</h1>
                 </div>    
                 <div>
                     {/* Content 1*/}
-                    <div style={{...roadmap.contentCenter, flexDirection: 'column'}}>
+                    <div style={mobile.content}>
                         <LightSpeed left>
-                            <div style={{margin: '5rem 0rem 3rem'}}>
-                                <h1>0% - Planning Phase 1</h1>
-                                <p className='font'>Deciding on the supply size, mint price/date, <br />art style and secondary market</p>
+                            <img src={handdrawn} alt='handdrawn-layers' style={{...roadmap.image, marginBottom: '3rem'}}/>
+                            <div style={{marginBottom: '2rem'}}>
+                                <h1 style={{marginBottom: '1rem'}}>Prelaunch</h1>
+                                <p className='font'>• Build a strong, close knit community<br/>
+                                • 444 deflationary Shinobis drawn<br/>
+                                • Targeted marketing in DAO chats<br/>
+                                • Strong Focus on Alpha Discussions<br/>
+                                • Application to ME launch (Requires dox to Katte, ME's admin)<br/>
+                                </p>
                             </div>
                         </LightSpeed>
-                        <Fade bottom>
-                            <div style={roadmap.CDContainer}>
-                                <div style={roadmap.CD}>
-                                    <span style={{fontSize: '24px'}} className='font'>669</span>
-                                    <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Supply</span>
-                                    <FontAwesomeIcon icon={faBoxOpen} size='2x'/>
-                                </div>
-                                <div style={roadmap.CD}>
-                                    <span style={{fontSize: '24px'}} className='font'>1 SOL</span>
-                                    <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Mint Price</span>
-                                    <FontAwesomeIcon icon={faTags} size='2x'/>
-                                </div>
-                                <div style={roadmap.CD}>
-                                    <span style={{fontSize: '24px'}} className='font'>22 Jan -- 2pm UTC</span>
-                                    <span style={{fontFamily: 'assassin', fontSize: '22px', marginBottom: '15px'}}>Mint Date and Time</span>
-                                    <FontAwesomeIcon icon={faCalendarAlt} size='2x'/>
-                                </div>
-                            </div>
-                        </Fade>
                     </div>
     
                     {/* Content 2*/}
-                    <div style={roadmap.contentRight}>
-                        <img src={handdrawn} alt='handdrawn-layers' style={roadmap.image}/>
+                    <div style={mobile.content}>
                         <LightSpeed right>
                             <div>
-                                <h1>25% - Planning Phase 2</h1>
-                                <p className='font'>The beginning of hand drawing the art pieces.<br />Setting up socials, websites and marketing</p>
-                                <div style={roadmap.logo}>
-                                    <FontAwesomeIcon icon={faDiscord} style={{width: '50px', height: '50px'}}/>
-                                    <FontAwesomeIcon icon={faTwitter} style={{width: '50px', height: '50px'}}/>
-                                    <img src={mktlogo} alt='marketing-logo' style={{width: '50px', height: '50px'}}/>
-                                </div>
+                                <h1 style={{marginBottom: '1rem'}}>Completion of Mint</h1>
+                                <p className='font'>
+                                • List on Magic Eden<br/>
+                                • List on Moon Rank<br/>
+                                • Sweep floor with royalties and funds from mint<br/>
+                                • Continued influencer marketing and shilling<br/>
+                                </p>
                             </div>
                         </LightSpeed>
                     </div>
     
                     {/* Content 3*/}
-                    <div style={roadmap.contentCenter}>
-                        <img src={ninja17} alt='ninja' style={{...roadmap.image, opacity: '30%'}} />
+                    <div style={mobile.content}>
                         <LightSpeed left>
                             <div>
-                                <h1>50% - Planning Phase 3</h1>
-                                <p className='font'>Completion of artwork. <br />Planning and setting up giveaways, <br />collaboration to garner hype.</p>
+                                <h1 style={{marginBottom: '1rem'}}>Post Launch DAO</h1>
+                                <p className='font'>
+                                • Community voting for raids and influencers shills<br/>
+                                • Exclusive Alpha Discussions only for holders<br/>
+                                • Possible alpha-inclusion with other DAOs that will return royalties to holders<br/>
+                                • Possible staking for governance token<br/>
+                                </p>
                             </div>
                         </LightSpeed>
                         <img src={ninja18} alt='ninja' style={{...roadmap.image, opacity: '30%'}} />
                     </div>
     
                     {/* Content 4*/}
-                    <div style={roadmap.contentLeft}>
+                    <div style={mobile.content}>
                         <LightSpeed left>
                             <div>
-                                <h1>75% - Minting Phase</h1>
-                                <p className='font'>Beginning of Minting <br />Continue to market, do giveaways and collaborations. <br />Start to code post-mint utilities for the community</p>
-                            </div>
-                        </LightSpeed>
-                        <img src={ninjagif} alt='ninjagif' style={roadmap.gif}/>
-                    </div>
-    
-                    {/* Content 5*/}
-                    <div style={roadmap.contentCenter}>
-                        <LightSpeed left>
-                            <div style={{marginBottom: '8rem'}}>
-                                <h1>100% - Post Mint Phase</h1>
-                                <p className='font'>Continue to market to support secondary market transactions. <br />Completion of utilities for holders of Nifty Ninjas <br/> - Full detail of our utilities can be found below.</p>
+                                <h1 style={{marginBottom: '1rem'}}>Utility Tools Ideas</h1>
+                                <p className='font'>
+                                • Exploring exclusive utility tools for holders<br/>
+                                • Data insights for ME page either through Tableau or Google extension<br/>
+                                • Categorisation of upcoming plays based on historical data<br/>
+                                • Information portal for beginners, contributed by experienced DAO members<br/>
+                                </p>
                             </div>
                         </LightSpeed>
                     </div>

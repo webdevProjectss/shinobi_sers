@@ -7,6 +7,13 @@
     height: 90vh;
 }
 
+.mobileLPContainer {
+    background-image: linear-gradient(to top, #000, transparent, transparent, transparent),
+    url('../../assets/img/cnbg2.png');
+    background-position: center;
+    height: 90vh;
+}
+
 @font-face {
     font-family: 'assassin';
     src: local('a-assassin-ninja-font'), url(../../assets/fonts/a-assassin-ninja-font/AssassinNinja-w12j8.otf) format('opentype');

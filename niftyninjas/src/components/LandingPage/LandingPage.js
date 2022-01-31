@@ -1,10 +1,9 @@
 import React, { Fragment, useState, useEffect } from 'react'
 // import { Link } from 'react-router-dom'
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//     faDiscord,
-//     faTwitter,
-//   } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faTwitter,
+  } from "@fortawesome/free-brands-svg-icons";
 import Countdown from 'react-countdown';
 import { Button } from '@mui/material'
 import { Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
@@ -24,7 +23,6 @@ import ninja5 from '../../assets/img/ninjas/ninja5.png'
 import ninja6 from '../../assets/img/ninjas/ninja6.png'
 import ninja7 from '../../assets/img/ninjas/ninja7.png'
 import dev1 from '../../assets/img/ninjas/dev1.png'
-import dev2 from '../../assets/img/ninjas/dev2.png'
 import dev3 from '../../assets/img/ninjas/dev3.png'
 
 
@@ -64,11 +62,11 @@ const styling = {
         flexDirection: 'row',
         justifyContent: 'space-between',
         textAlign: 'center',
-        width: '10%',
+        width: '60%',
         height: '10vh',
         margin: 'auto',
         paddingTop: '50px',
-        fontFamily: 'assassin'
+        fontFamily: 'assassin',
     },
     description: {
         display: 'flex',
@@ -79,6 +77,19 @@ const styling = {
         margin: '0px auto 5rem',
         lineHeight: '40px',
         maxWidth: '1500px'
+    },
+    socials: {
+        display: 'flex',
+        flexDirection: 'row',
+        width: '5%',
+        justifyContent: 'flex-end',
+    },
+    links: {
+        display: 'flex',
+        flexDirection: 'row',
+        width: '50%',
+        justifyContent: 'space-between',
+        fontSize: '20px',
     }
 }
 
@@ -127,7 +138,7 @@ const team = {
     container: {
         display: 'flex',
         flexDirection: 'column',
-        width: '80%',
+        width: '60%',
         textAlign: 'center',
         margin: '5rem auto 0rem',
         fontFamily: 'assassin',
@@ -197,14 +208,22 @@ const mobile = {
     },
     navbar: {
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'space-between',
         textAlign: 'center',
-        width: '30%',
+        width: '60%',
         height: '10vh',
         margin: 'auto',
         paddingTop: '50px',
         fontFamily: 'assassin'
+    },
+    links: {
+        display: 'flex',
+        flexDirection: 'row',
+        width: '100%',
+        justifyContent: 'space-between',
+        margin: '0rem auto 20px',
+        fontSize: '18px'
     },
     countdownContainer: {
         display: 'flex',
@@ -252,13 +271,13 @@ const mobile = {
         display: 'flex',
         flexDirection: 'column',
         width: '80%',
-        margin: '1rem auto 8rem',
+        margin: '2rem auto 8rem',
         justifyContent: 'space-between'
     },
     teamIndividual: {
         lineHeight: '1rem',
         fontSize: '18px',
-        marginBottom: '5px'
+        marginBottom: '20px'
     },
     faqContainer: {
         display: 'flex',
@@ -325,16 +344,25 @@ const LandingPage = () => {
                     <div className='LPContainer'>
                         {/* Navbar */}
                         <div style={styling.navbar}>
+
+                            {/* Links */}
+                            <div style={styling.links}>
+                                <a style={{color: 'white', textDecoration: 'none'}} href='#roadmap' className='font'>Roadmap</a>
+                                <a style={{color: 'white', textDecoration: 'none'}} href='#team' className='font'>Team</a>
+                                <a style={{color: 'white', textDecoration: 'none'}} href='#faq' className='font'>FAQ</a>
+                            </div>
+
                             {/* Socials */}
-                                {/* <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faDiscord} size='2x'/></a>
-                                <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faTwitter} size='2x'/></a> */}
+                            <div style={styling.socials}>
+                                <a href='https://twitter.com/ShinobiSersNFT' style={{color: 'white'}}><FontAwesomeIcon icon={faTwitter} size='2x'/></a>
+                            </div>
                         </div>
 
                         {/* Header */}
                         <div style={styling.header}>
                             <div style={styling.heading}>
                                 <Bounce bottom>
-                                    <h1 style={{marginBottom: '25px', fontSize: '90px', fontFamily: 'assassin'}}>Crafty Ninjas</h1>
+                                    <h1 style={{marginBottom: '25px', fontSize: '90px', fontFamily: 'assassin'}}>Shinobi Sers</h1>
                                     {/* <p>369 Ninjas hiding in the shadow</p> */}
                                     <p style={{fontFamily: 'assassin'}}>Are you worthy enough to catch it?</p>
                                 </Bounce>    
@@ -350,7 +378,7 @@ const LandingPage = () => {
 
                         <div style={styling.description}>
                             <p style={{color: '#FFA700'}} className='font'>STEALTH AND PRECISION</p>
-                            <p style={{fontSize: '48px', marginBottom: '30px', fontFamily: 'assassin'}}>Crafty Ninjas</p>
+                            <p style={{fontSize: '48px', marginBottom: '30px', fontFamily: 'assassin'}}>Shinobi Sers</p>
                             <Fade left>
                                 <p className='font' style={{marginBottom: '0px'}}>Supply of Shinobis kept low, stealth and precision. All with a strong secondary
                                 market in mind.
@@ -419,14 +447,14 @@ const LandingPage = () => {
                         </div> */}
 
                         {/* Team Section */}
-                        <div style={team.container}>
+                        <div id='team' style={team.container}>
                             <p className='font' style={{color: '#7F7D9C'}}>Behind The Scenes</p>
                             <h1 style={{fontFamily: 'assassin'}}>Our Team</h1>
                             <div style={team.team}>
                                 <div style={team.individual}>
                                     <img src={dev1} alt='dev1' style={team.image}/>
                                     <Fade bottom>
-                                        <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>kokoman</p>
+                                        <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>maga jitsu</p>
                                         <p className='font'>Lead Developer</p>
                                     </Fade>
                                 </div>
@@ -434,15 +462,7 @@ const LandingPage = () => {
                                 <div style={team.individual}>
                                     <img src={dev3} alt='dev3' style={team.image}/>
                                     <Fade bottom>
-                                        <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>spam or ham</p>
-                                        <p className='font'>Senior Developer</p>
-                                    </Fade>
-                                </div>
-
-                                <div style={team.individual}>
-                                    <img src={dev2} alt='dev2' style={team.image}/>
-                                    <Fade bottom>
-                                        <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>wooohooo</p>
+                                        <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>biju dama</p>
                                         <p className='font'>Developer</p>
                                     </Fade>
                                 </div>
@@ -451,7 +471,7 @@ const LandingPage = () => {
                         
 
                         {/* FAQ */}
-                        <div style={faq.container}>
+                        <div id='faq' style={faq.container}>
                             <p className='font' style={{color: '#B24BF3'}}>Clear Your Doubts</p>
                             <h1 style={{fontFamily: 'assassin', marginBottom: '2rem'}}>Frequently Asked Questions</h1>
                             <Accordion style={faq.content} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -485,6 +505,7 @@ const LandingPage = () => {
                     <Footer />
                     </div>
                 </div>
+                
             </Fragment>
         )
     }
@@ -494,19 +515,27 @@ const LandingPage = () => {
         return (
             <Fragment>
                 <div style={mobile.pageContainer}>
-                    <div className='LPContainer'>
+                    <div className='mobileLPContainer'>
                         {/* Navbar */}
                         <div style={mobile.navbar}>
+                            {/* Links */}
+                            <div style={mobile.links}>
+                                <a style={{color: 'white', textDecoration: 'none'}} href='#roadmap' className='font'>Roadmap</a>
+                                <a style={{color: 'white', textDecoration: 'none'}} href='#team' className='font'>Team</a>
+                                <a style={{color: 'white', textDecoration: 'none'}} href='#faq' className='font'>FAQ</a>
+                            </div>
+
                             {/* Socials */}
-                                {/* <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faDiscord} size='2x'/></a>
-                                <a href='#' style={{color: 'white'}}><FontAwesomeIcon icon={faTwitter} size='2x'/></a> */}
+                            <div style={mobile.socials}>
+                                <a href='https://twitter.com/ShinobiSersNFT' style={{color: 'white'}}><FontAwesomeIcon icon={faTwitter} size='2x'/></a>
+                            </div>
                         </div>
 
                         {/* Header */}
                         <div style={mobile.header}>
                             <div style={mobile.heading}>
                                 <Bounce bottom>
-                                    <h1 style={{marginBottom: '25px', fontSize: '80px', fontFamily: 'assassin'}}>Crafty Ninjas</h1>
+                                    <h1 style={{marginBottom: '25px', fontSize: '80px', fontFamily: 'assassin'}}>Shinobi Sers</h1>
                                     {/* <p>369 Ninjas hiding in the shadow</p> */}
                                     <p style={{fontFamily: 'assassin'}}>Are you worthy enough to catch it?</p>
                                 </Bounce>    
@@ -522,7 +551,7 @@ const LandingPage = () => {
 
                         <div style={mobile.aboutDescription}>
                             <p style={{color: '#FFA700'}} className='font'>STEALTH AND PRECISION</p>
-                            <p style={{fontSize: '48px', marginBottom: '30px', fontFamily: 'assassin'}}>Crafty Ninjas</p>
+                            <p style={{fontSize: '48px', marginBottom: '30px', fontFamily: 'assassin'}}>Shinobi Sers</p>
                             <Fade left>
                                 <p className='font' style={{marginBottom: '0px'}}>Supply of Shinobis kept low, stealth and precision. All with a strong secondary
                                 market in mind.
@@ -582,7 +611,7 @@ const LandingPage = () => {
                         </div>
 
                         {/* Road Map */}
-                        {/* <Timeline /> */}
+                        <Timeline />
 
                         {/* Utilities Section */}
                         {/* <div style={utilities.container}>
@@ -591,14 +620,14 @@ const LandingPage = () => {
                         </div> */}
 
                         {/* Team Section */}
-                        <div style={mobile.teamContainer}>
+                        <div id='team' style={mobile.teamContainer}>
                             <p className='font' style={{color: '#7F7D9C'}}>Behind The Scenes</p>
                             <h1 style={{fontFamily: 'assassin'}}>Our Team</h1>
                             <div style={mobile.team}>
                                 <div style={mobile.teamIndividual}>
                                     <img src={dev1} alt='dev1' style={team.image}/>
                                     <Fade bottom>
-                                        <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>kokoman</p>
+                                        <p style={{marginTop: '30px', fontSize: '22px', fontFamily: 'assassin'}}>maga jitsu</p>
                                         <p className='font'>Lead Developer</p>
                                     </Fade>
                                 </div>
@@ -606,15 +635,7 @@ const LandingPage = () => {
                                 <div style={mobile.teamIndividual}>
                                     <img src={dev3} alt='dev3' style={team.image}/>
                                     <Fade bottom>
-                                        <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>spam or ham</p>
-                                        <p className='font'>Senior Developer</p>
-                                    </Fade>
-                                </div>
-
-                                <div style={mobile.teamIndividual}>
-                                    <img src={dev2} alt='dev2' style={team.image}/>
-                                    <Fade bottom>
-                                        <p style={{marginTop: '25px', fontSize: '22px', fontFamily: 'assassin'}}>wooohooo</p>
+                                        <p style={{marginTop: '30px', fontSize: '22px', fontFamily: 'assassin'}}>bijuu dama</p>
                                         <p className='font'>Developer</p>
                                     </Fade>
                                 </div>
@@ -623,7 +644,7 @@ const LandingPage = () => {
                         
 
                         {/* FAQ */}
-                        <div style={mobile.faqContainer}>
+                        <div id='faq' style={mobile.faqContainer}>
                             <p className='font' style={{color: '#B24BF3'}}>Clear Your Doubts</p>
                             <h1 style={{fontFamily: 'assassin', marginBottom: '2rem'}}>Frequently Asked Questions</h1>
                             <Accordion style={mobile.faqContent} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
