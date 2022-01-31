@@ -12,11 +12,15 @@ import LightSpeed from 'react-reveal/LightSpeed'
 
 // import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 // import 'react-vertical-timeline-component/style.min.css';
-import handdrawn from '../../assets/img/handdrawn.png'
+// import handdrawn from '../../assets/img/handdrawn.png'
 // import mktlogo from '../../assets/img/thefunnelmktlogo.jpg'
 // import ninjagif from '../../assets/img/ninjas/craftyninja.gif'
 import ninja17 from '../../assets/img/ninjas/ninja17.png'
 import ninja18 from '../../assets/img/ninjas/ninja18.png'
+import headgif from '../../assets/img/head.gif'
+import maskgif from '../../assets/img/mask.gif'
+import weapongif from '../../assets/img/weapon.gif'
+import clothingshoegif from '../../assets/img/clothingshoe.gif'
 // import comingsoon from '../../assets/img/comingsoon.png'
 
 const roadmap = {
@@ -56,10 +60,16 @@ const roadmap = {
         height: '300px',
         borderRadius: '10px'
     },
+    gifContainer: {
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gridGap: '1rem',
+    },
     gif: {
-        width: '300px',
-        height: '300px',
-        borderRadius: '10px'
+        width: '180px',
+        height: '180px',
+        borderRadius: '10px',
+        backgroundColor: '#545454',
     },
     logo: {
         display: 'flex',
@@ -96,16 +106,12 @@ const mobile = {
     },
     content: {
         margin: '0rem auto 8rem',
-        lineHeight: '2rem'
+        lineHeight: '2rem',
     },
     image: {
         width: '300px',
         height: '300px',
         borderRadius: '10px'
-    },
-    gif: {
-        width: '300px',
-        height: '300px'
     },
     logo: {
         display: 'flex',
@@ -123,6 +129,20 @@ const mobile = {
         backgroundColor: '#41424C',
         padding: '5px 0px 15px',
         borderRadius: '15px'
+    },
+    gifContainer: {
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        justifyItems: 'center',
+        gridGap: '10px',
+        width: '67%',
+        margin: '0rem auto 2rem'
+    },
+    gif: {
+        width: '150px',
+        height: '150px',
+        borderRadius: '10px',
+        backgroundColor: '#545454',
     },
 }
 
@@ -154,13 +174,19 @@ const Timeline = () => {
             <div id='roadmap' style={roadmap.container}>
                 <div style={{marginTop: '3rem', marginBottom: '20px'}}>
                     <p style={{textTransform: 'uppercase', color: '#FF5800'}} className='font'>Future Plans</p>
-                    <h1>Road Map</h1>
+                    <h1 style={{marginBottom: '2rem'}}>Road Map</h1>
                 </div>    
                 <div>
                     {/* Content 1*/}
                     <div style={roadmap.contentRight}>
                         <LightSpeed left>
-                            <img src={handdrawn} alt='handdrawn-layers' style={roadmap.image}/>
+                            {/* <img src={handdrawn} alt='handdrawn-layers' style={roadmap.image}/> */}
+                            <div style={roadmap.gifContainer}>
+                                <img src={headgif} alt='head-gif' style={roadmap.gif}/>
+                                <img src={maskgif} alt='mask-gif' style={roadmap.gif}/>
+                                <img src={weapongif} alt='weapon-gif' style={roadmap.gif}/>
+                                <img src={clothingshoegif} alt='clothingshoe-gif' style={roadmap.gif}/>
+                            </div>
                             <div style={{margin: '5rem 0rem 3rem'}}>
                                 <h1>Prelaunch</h1>
                                 <p className='font'>• Build a strong, close knit community<br/>
@@ -237,7 +263,13 @@ const Timeline = () => {
                     {/* Content 1*/}
                     <div style={mobile.content}>
                         <LightSpeed left>
-                            <img src={handdrawn} alt='handdrawn-layers' style={{...roadmap.image, marginBottom: '3rem'}}/>
+                            {/* <img src={handdrawn} alt='handdrawn-layers' style={{...roadmap.image, marginBottom: '3rem'}}/> */}
+                            <div style={mobile.gifContainer}>
+                                <img src={headgif} alt='head-gif' style={mobile.gif}/>
+                                <img src={maskgif} alt='mask-gif' style={mobile.gif}/>
+                                <img src={weapongif} alt='weapon-gif' style={mobile.gif}/>
+                                <img src={clothingshoegif} alt='clothingshoe-gif' style={mobile.gif}/>
+                            </div>
                             <div style={{marginBottom: '2rem'}}>
                                 <h1 style={{marginBottom: '1rem'}}>Prelaunch</h1>
                                 <p className='font'>• Build a strong, close knit community<br/>

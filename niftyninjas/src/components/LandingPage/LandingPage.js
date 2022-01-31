@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faTwitter,
   } from "@fortawesome/free-brands-svg-icons";
+  import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
 import Countdown from 'react-countdown';
 import { Button } from '@mui/material'
 import { Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
@@ -90,6 +91,14 @@ const styling = {
         width: '50%',
         justifyContent: 'space-between',
         fontSize: '20px',
+    },
+    scrollUp: {
+        position: 'fixed',
+        bottom: '0',
+        right: '0',
+        marginRight: '3rem',
+        marginBottom: '2rem',
+        color: 'white',
     }
 }
 
@@ -340,7 +349,7 @@ const LandingPage = () => {
     const displayDesktop = () => {
         return (
             <Fragment>
-                <div style={styling.pageContainer}>
+                <div id='top' style={styling.pageContainer}>
                     <div className='LPContainer'>
                         {/* Navbar */}
                         <div style={styling.navbar}>
@@ -501,7 +510,7 @@ const LandingPage = () => {
                             </Accordion>
                         </div>
 
-
+                    <a style={styling.scrollUp} href='#top'><FontAwesomeIcon icon={faAngleUp} size='3x'/></a>
                     <Footer />
                     </div>
                 </div>
