@@ -135,7 +135,7 @@ const mobile = {
         gridTemplateColumns: '1fr 1fr',
         justifyItems: 'center',
         gridGap: '10px',
-        width: '67%',
+        width: 'auto',
         margin: '0rem auto 2rem'
     },
     gif: {
@@ -143,6 +143,7 @@ const mobile = {
         height: '150px',
         borderRadius: '10px',
         backgroundColor: '#545454',
+        margin: 'auto'
     },
 }
 
@@ -265,10 +266,10 @@ const Timeline = () => {
                         <LightSpeed left>
                             {/* <img src={handdrawn} alt='handdrawn-layers' style={{...roadmap.image, marginBottom: '3rem'}}/> */}
                             <div style={mobile.gifContainer}>
-                                <img src={headgif} alt='head-gif' style={mobile.gif}/>
-                                <img src={maskgif} alt='mask-gif' style={mobile.gif}/>
-                                <img src={weapongif} alt='weapon-gif' style={mobile.gif}/>
-                                <img src={clothingshoegif} alt='clothingshoe-gif' style={mobile.gif}/>
+                                <img src={headgif} alt='head-gif' style={{...mobile.gif, marginLeft: '2rem'}}/>
+                                <img src={maskgif} alt='mask-gif' style={{...mobile.gif, marginRight: '2rem'}}/>
+                                <img src={weapongif} alt='weapon-gif' style={{...mobile.gif, marginLeft: '2rem'}}/>
+                                <img src={clothingshoegif} alt='clothingshoe-gif' style={{...mobile.gif, marginRight: '2rem'}}/>
                             </div>
                             <div style={{marginBottom: '2rem'}}>
                                 <h1 style={{marginBottom: '1rem'}}>Prelaunch</h1>
@@ -285,7 +286,7 @@ const Timeline = () => {
                     {/* Content 2*/}
                     <div style={mobile.content}>
                         <LightSpeed right>
-                            <div>
+                            <div style={{marginTop: '12rem', marginBottom: '12rem'}}>
                                 <h1 style={{marginBottom: '1rem'}}>Completion of Mint</h1>
                                 <p className='font'>
                                 • List on Magic Eden<br/>
@@ -305,7 +306,7 @@ const Timeline = () => {
                                 <p className='font'>
                                 • Community voting for raids and influencers shills<br/>
                                 • Exclusive Alpha Discussions only for holders<br/>
-                                • Possible alpha-inclusion with other DAOs that will return royalties to holders<br/>
+                                • Possible alpha-inclusion with other DAOs that will return<br/>royalties to holders<br/>
                                 • Possible staking for governance token<br/>
                                 </p>
                             </div>
@@ -320,9 +321,9 @@ const Timeline = () => {
                                 <h1 style={{marginBottom: '1rem'}}>Utility Tools Ideas</h1>
                                 <p className='font'>
                                 • Exploring exclusive utility tools for holders<br/>
-                                • Data insights for ME page either through Tableau or Google extension<br/>
+                                • Data insights for ME page either through Tableau or<br/>Google extension<br/>
                                 • Categorisation of upcoming plays based on historical data<br/>
-                                • Information portal for beginners, contributed by experienced DAO members<br/>
+                                • Information portal for beginners, contributed by experienced<br/>DAO members<br/>
                                 </p>
                             </div>
                         </LightSpeed>
