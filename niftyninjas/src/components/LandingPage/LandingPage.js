@@ -489,7 +489,7 @@ const LandingPage = () => {
                             </Accordion>
                             <Accordion style={faq.content} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>When is mint and how much per mint?</AccordionSummary>
-                                <AccordionDetails style={faq.details} className='font'>Minting Date will be on the 22 Janaury 2022 -- 2pm UTC. Our Ninjas will be priced at 1 SOL per mint.</AccordionDetails>
+                                <AccordionDetails style={faq.details} className='font'>Minting Date - TBA. Our Ninjas will be priced at 0.5 SOL per mint.</AccordionDetails>
                             </Accordion>
                             <Accordion style={faq.content} expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>Which secondary market will we be listing on?</AccordionSummary>
@@ -504,10 +504,10 @@ const LandingPage = () => {
                                 <AccordionDetails style={faq.details} className='font'>Funds will be driven towards marketing, giveaways and other events. <br/>
                                 85% of royalities will be allocated for sweeping the floor.</AccordionDetails>
                             </Accordion>
-                            <Accordion style={faq.content} expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
+                            {/* <Accordion style={faq.content} expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>How do I check the rarity of my ninja?</AccordionSummary>
                                 <AccordionDetails style={faq.details} className='font'>Rarity Page is still under construction. Stay tune for more updates</AccordionDetails>
-                            </Accordion>
+                            </Accordion> */}
                         </div>
 
                     <a style={styling.scrollUp} href='#top'><FontAwesomeIcon icon={faAngleUp} size='3x'/></a>
@@ -662,7 +662,7 @@ const LandingPage = () => {
                             </Accordion>
                             <Accordion style={mobile.faqContent} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>When is mint and how much per mint?</AccordionSummary>
-                                <AccordionDetails style={mobile.faqDetails} className='font'>Minting Date will be on the 22 Janaury 2022 -- 2pm UTC. Our Ninjas will be priced at 1 SOL per mint.</AccordionDetails>
+                                <AccordionDetails style={mobile.faqDetails} className='font'>Minting Date - TBA. Our Ninjas will be priced at 0.5 SOL per mint.</AccordionDetails>
                             </Accordion>
                             <Accordion style={mobile.faqContent} expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>Which secondary market will we be listing on?</AccordionSummary>
@@ -677,10 +677,10 @@ const LandingPage = () => {
                                 <AccordionDetails style={mobile.faqDetails} className='font'>Funds will be driven towards marketing, giveaways and other events. <br/>
                                 85% of royalities will be allocated for sweeping the floor.</AccordionDetails>
                             </Accordion>
-                            <Accordion style={mobile.faqContent} expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
+                            {/* <Accordion style={mobile.faqContent} expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>How do I check the rarity of my ninja?</AccordionSummary>
                                 <AccordionDetails style={mobile.faqDetails} className='font'>Rarity Page is still under construction. Stay tune for more updates</AccordionDetails>
-                            </Accordion>
+                            </Accordion> */}
                         </div>
 
 

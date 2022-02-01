@@ -36,7 +36,7 @@ const roadmap = {
     contentRight: {
         display: 'grid',
         gridTemplateColumns: '1fr 2fr',
-        justifyItems: 'center',
+        justifyItems: 'space-around',
         alignItems: 'center',
         width: '80%',
         height: '25rem',
