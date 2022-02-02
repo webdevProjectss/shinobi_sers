@@ -225,8 +225,8 @@ const Timeline = () => {
                                 <p className='font'>
                                 • Community voting for raids and influencers shills<br/>
                                 • Exclusive Alpha Discussions only for holders<br/>
-                                • 10% of mint profits to go into royalties wallet. This wallet would be<br/>used tosweep the floor, mint/buy projects based on community voting.<br/>
-                                • Post-mint decisions would be to buy into projects, hold giveaways for<br/>this new purchases to increase credibility<br/>
+                                • 10% of mint profits to go into royalties wallet. This wallet would be<br/>used to sweep the floor, mint/buy projects based on community voting.<br/>
+                                • Post-mint decisions to buy into projects, hold giveaways for<br/>these new purchases to increase credibility<br/>
                                 </p>
                             </div>
                         </LightSpeed>
@@ -306,8 +306,8 @@ const Timeline = () => {
                                 <p className='font'>
                                 • Community voting for raids and influencers shills<br/>
                                 • Exclusive Alpha Discussions only for holders<br/>
-                                • 10% of mint profits to go into royalties wallet. This wallet would be<br/>used tosweep the floor, mint/buy projects based on community voting.<br/>
-                                • Post-mint decisions would be to buy into projects, hold giveaways for<br/>this new purchases to increase credibility<br/>
+                                • 10% of mint profits to go into royalties wallet. This wallet would be<br/>used to sweep the floor, mint/buy projects based on community voting.<br/>
+                                • Post-mint decisions to buy into projects, hold giveaways for<br/>these new purchases to increase credibility<br/>
                                 </p>
                             </div>
                         </LightSpeed>

@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react'
 // import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+    faDiscord,
     faTwitter,
   } from "@fortawesome/free-brands-svg-icons";
   import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
@@ -82,8 +83,8 @@ const styling = {
     socials: {
         display: 'flex',
         flexDirection: 'row',
-        width: '5%',
-        justifyContent: 'flex-end',
+        width: '15%',
+        justifyContent: 'space-between',
     },
     links: {
         display: 'flex',
@@ -234,6 +235,13 @@ const mobile = {
         margin: '0rem auto 20px',
         fontSize: '18px'
     },
+    socials: {
+        display: 'flex',
+        flexDirection: 'row',
+        width: '50%',
+        margin: 'auto',
+        justifyContent: 'space-around'
+    },
     countdownContainer: {
         display: 'flex',
         flexDirection: 'column',
@@ -363,6 +371,7 @@ const LandingPage = () => {
 
                             {/* Socials */}
                             <div style={styling.socials}>
+                                <a href='https://discord.gg/sC5cEDmW8x' style={{color: 'white'}}><FontAwesomeIcon icon={faDiscord} size='2x'/></a>
                                 <a href='https://twitter.com/ShinobiSersNFT' style={{color: 'white'}}><FontAwesomeIcon icon={faTwitter} size='2x'/></a>
                             </div>
                         </div>
@@ -536,6 +545,7 @@ const LandingPage = () => {
 
                             {/* Socials */}
                             <div style={mobile.socials}>
+                                <a href='https://discord.gg/sC5cEDmW8x' style={{color: 'white'}}><FontAwesomeIcon icon={faDiscord} size='2x'/></a>
                                 <a href='https://twitter.com/ShinobiSersNFT' style={{color: 'white'}}><FontAwesomeIcon icon={faTwitter} size='2x'/></a>
                             </div>
                         </div>
