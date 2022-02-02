@@ -381,7 +381,7 @@ const LandingPage = () => {
                         {/* Countdown Timer */}
                         <div style={countdown.container}>
                             <p style={countdown.title} className='font'>Mint Starting In: </p>
-                            <Countdown date={'2022-01-22T03:00:00.00+00:00'} renderer={renderer}/>
+                            <Countdown date={'2022-02-12T19:00:00.00+00:00'} renderer={renderer}/>
                             <Button variant='contained' style={countdown.button}>Mint Now</Button>
                         </div>
 
@@ -499,11 +499,11 @@ const LandingPage = () => {
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>Will there be whietlist and how do i join?</AccordionSummary>
                                 <AccordionDetails style={faq.details} className='font'>Further details will be given when whitelist event is launched. Stay tune for more updates in our Discord server.</AccordionDetails>
                             </Accordion>
-                            <Accordion style={faq.content} expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+                            {/* <Accordion style={faq.content} expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>What will happen after the mint is over?</AccordionSummary>
                                 <AccordionDetails style={faq.details} className='font'>Funds will be driven towards marketing, giveaways and other events. <br/>
                                 85% of royalities will be allocated for sweeping the floor.</AccordionDetails>
-                            </Accordion>
+                            </Accordion> */}
                             {/* <Accordion style={faq.content} expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>How do I check the rarity of my ninja?</AccordionSummary>
                                 <AccordionDetails style={faq.details} className='font'>Rarity Page is still under construction. Stay tune for more updates</AccordionDetails>
@@ -554,7 +554,7 @@ const LandingPage = () => {
                         {/* Countdown Timer */}
                         <div style={mobile.countdownContainer}>
                             <p style={mobile.countdownTitle} className='font'>Mint Starting In: </p>
-                            <Countdown date={'2022-01-22T03:00:00.00+00:00'} renderer={renderer}/>
+                            <Countdown date={'2022-02-12T19:00:00.00+00:00'} renderer={renderer}/>
                             <Button variant='contained' style={mobile.countdownButton}>Mint Now</Button>
                         </div>
 
@@ -672,11 +672,11 @@ const LandingPage = () => {
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>Will there be whietlist and how do i join?</AccordionSummary>
                                 <AccordionDetails style={mobile.faqDetails} className='font'>Further details will be given when whitelist event is launched. Stay tune for more updates in our Discord server.</AccordionDetails>
                             </Accordion>
-                            <Accordion style={mobile.faqContent} expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+                            {/* <Accordion style={mobile.faqContent} expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>What will happen after the mint is over?</AccordionSummary>
                                 <AccordionDetails style={mobile.faqDetails} className='font'>Funds will be driven towards marketing, giveaways and other events. <br/>
                                 85% of royalities will be allocated for sweeping the floor.</AccordionDetails>
-                            </Accordion>
+                            </Accordion> */}
                             {/* <Accordion style={mobile.faqContent} expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>How do I check the rarity of my ninja?</AccordionSummary>
                                 <AccordionDetails style={mobile.faqDetails} className='font'>Rarity Page is still under construction. Stay tune for more updates</AccordionDetails>

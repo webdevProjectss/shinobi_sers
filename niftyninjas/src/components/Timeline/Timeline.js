@@ -136,7 +136,7 @@ const mobile = {
         justifyItems: 'center',
         gridGap: '10px',
         width: 'auto',
-        margin: '0rem auto 2rem'
+        margin: '0rem auto 3rem'
     },
     gif: {
         width: '150px',
@@ -209,8 +209,8 @@ const Timeline = () => {
                                 <p className='font'>
                                 • List on Magic Eden<br/>
                                 • List on Moon Rank<br/>
-                                • Sweep floor with royalties and funds from mint<br/>
                                 • Continued influencer marketing and shilling<br/>
+                                • 20% of royalties would be included in the smart contract<br/>to encourage holding
                                 </p>
                             </div>
                         </LightSpeed>
@@ -225,8 +225,8 @@ const Timeline = () => {
                                 <p className='font'>
                                 • Community voting for raids and influencers shills<br/>
                                 • Exclusive Alpha Discussions only for holders<br/>
-                                • Possible alpha-inclusion with other DAOs that will return royalties to holders<br/>
-                                • Possible staking for governance token<br/>
+                                • 10% of mint profits to go into royalties wallet. This wallet would be<br/>used tosweep the floor, mint/buy projects based on community voting.<br/>
+                                • Post-mint decisions would be to buy into projects, hold giveaways for<br/>this new purchases to increase credibility<br/>
                                 </p>
                             </div>
                         </LightSpeed>
@@ -266,10 +266,10 @@ const Timeline = () => {
                         <LightSpeed left>
                             {/* <img src={handdrawn} alt='handdrawn-layers' style={{...roadmap.image, marginBottom: '3rem'}}/> */}
                             <div style={mobile.gifContainer}>
-                                <img src={headgif} alt='head-gif' style={{...mobile.gif, marginLeft: '2rem'}}/>
-                                <img src={maskgif} alt='mask-gif' style={{...mobile.gif, marginRight: '2rem'}}/>
-                                <img src={weapongif} alt='weapon-gif' style={{...mobile.gif, marginLeft: '2rem'}}/>
-                                <img src={clothingshoegif} alt='clothingshoe-gif' style={{...mobile.gif, marginRight: '2rem'}}/>
+                                <img src={headgif} alt='head-gif' style={{...mobile.gif, marginLeft: '60px'}}/>
+                                <img src={maskgif} alt='mask-gif' style={{...mobile.gif, marginRight: '60px'}}/>
+                                <img src={weapongif} alt='weapon-gif' style={{...mobile.gif, marginLeft: '60px'}}/>
+                                <img src={clothingshoegif} alt='clothingshoe-gif' style={{...mobile.gif, marginRight: '60px'}}/>
                             </div>
                             <div style={{marginBottom: '2rem'}}>
                                 <h1 style={{marginBottom: '1rem'}}>Prelaunch</h1>
@@ -291,8 +291,8 @@ const Timeline = () => {
                                 <p className='font'>
                                 • List on Magic Eden<br/>
                                 • List on Moon Rank<br/>
-                                • Sweep floor with royalties and funds from mint<br/>
                                 • Continued influencer marketing and shilling<br/>
+                                • 20% of royalties would be included in the smart contract<br/>to encourage holding
                                 </p>
                             </div>
                         </LightSpeed>
@@ -306,8 +306,8 @@ const Timeline = () => {
                                 <p className='font'>
                                 • Community voting for raids and influencers shills<br/>
                                 • Exclusive Alpha Discussions only for holders<br/>
-                                • Possible alpha-inclusion with other DAOs that will return<br/>royalties to holders<br/>
-                                • Possible staking for governance token<br/>
+                                • 10% of mint profits to go into royalties wallet. This wallet would be<br/>used tosweep the floor, mint/buy projects based on community voting.<br/>
+                                • Post-mint decisions would be to buy into projects, hold giveaways for<br/>this new purchases to increase credibility<br/>
                                 </p>
                             </div>
                         </LightSpeed>
