@@ -390,7 +390,7 @@ const LandingPage = () => {
                         {/* Countdown Timer */}
                         <div style={countdown.container}>
                             <p style={countdown.title} className='font'>Mint Starting In: </p>
-                            <Countdown date={'2022-02-12T19:00:00.00+00:00'} renderer={renderer}/>
+                            <Countdown date={'2022-02-05T19:00:00.00+00:00'} renderer={renderer}/>
                             <Button variant='contained' style={countdown.button}>Mint Now</Button>
                         </div>
 
@@ -564,7 +564,7 @@ const LandingPage = () => {
                         {/* Countdown Timer */}
                         <div style={mobile.countdownContainer}>
                             <p style={mobile.countdownTitle} className='font'>Mint Starting In: </p>
-                            <Countdown date={'2022-02-12T19:00:00.00+00:00'} renderer={renderer}/>
+                            <Countdown date={'2022-02-05T19:00:00.00+00:00'} renderer={renderer}/>
                             <Button variant='contained' style={mobile.countdownButton}>Mint Now</Button>
                         </div>
 
