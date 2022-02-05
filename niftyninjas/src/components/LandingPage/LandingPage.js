@@ -498,16 +498,16 @@ const LandingPage = () => {
                             </Accordion>
                             <Accordion style={faq.content} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>When is mint and how much per mint?</AccordionSummary>
-                                <AccordionDetails style={faq.details} className='font'>Minting Date - TBA. Our Ninjas will be priced at 0.5 SOL per mint.</AccordionDetails>
+                                <AccordionDetails style={faq.details} className='font'>Minting Date - 5th Feb 1900 UTC. Our Ninjas will be priced at 0.5 SOL per mint.</AccordionDetails>
                             </Accordion>
                             <Accordion style={faq.content} expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>Which secondary market will we be listing on?</AccordionSummary>
                                 <AccordionDetails style={faq.details} className='font'>We will be listing on Magic Eden</AccordionDetails>
                             </Accordion>
-                            <Accordion style={faq.content} expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+                            {/* <Accordion style={faq.content} expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>Will there be whietlist and how do i join?</AccordionSummary>
                                 <AccordionDetails style={faq.details} className='font'>Further details will be given when whitelist event is launched. Stay tune for more updates in our Discord server.</AccordionDetails>
-                            </Accordion>
+                            </Accordion> */}
                             {/* <Accordion style={faq.content} expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>What will happen after the mint is over?</AccordionSummary>
                                 <AccordionDetails style={faq.details} className='font'>Funds will be driven towards marketing, giveaways and other events. <br/>
@@ -672,16 +672,16 @@ const LandingPage = () => {
                             </Accordion>
                             <Accordion style={mobile.faqContent} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>When is mint and how much per mint?</AccordionSummary>
-                                <AccordionDetails style={mobile.faqDetails} className='font'>Minting Date - TBA. Our Ninjas will be priced at 0.5 SOL per mint.</AccordionDetails>
+                                <AccordionDetails style={mobile.faqDetails} className='font'>Minting Date - 5th Feb 1900 UTC. Our Ninjas will be priced at 0.5 SOL per mint.</AccordionDetails>
                             </Accordion>
                             <Accordion style={mobile.faqContent} expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>Which secondary market will we be listing on?</AccordionSummary>
                                 <AccordionDetails style={mobile.faqDetails} className='font'>We will be listing on Magic Eden</AccordionDetails>
                             </Accordion>
-                            <Accordion style={mobile.faqContent} expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-                                <AccordionSummary expandIcon={<ExpandMoreIcon />}>Will there be whietlist and how do i join?</AccordionSummary>
-                                <AccordionDetails style={mobile.faqDetails} className='font'>Further details will be given when whitelist event is launched. Stay tune for more updates in our Discord server.</AccordionDetails>
-                            </Accordion>
+                            {/* <Accordion style={mobile.faqContent} expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+                                <AccordionSummary expandIcon={<ExpandMoreIcon />}>Will there be whitelist and how do i join?</AccordionSummary>
+                                <AccordionDetails style={mobile.faqDetails} className='font'>Thank you for your support, all whitelist spots are taken.</AccordionDetails>
+                            </Accordion> */}
                             {/* <Accordion style={mobile.faqContent} expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
                                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>What will happen after the mint is over?</AccordionSummary>
                                 <AccordionDetails style={mobile.faqDetails} className='font'>Funds will be driven towards marketing, giveaways and other events. <br/>
