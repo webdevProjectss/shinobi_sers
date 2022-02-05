@@ -391,7 +391,7 @@ const LandingPage = () => {
                         <div style={countdown.container}>
                             <p style={countdown.title} className='font'>Mint Starting In: </p>
                             <Countdown date={'2022-02-05T19:00:00.00+00:00'} renderer={renderer}/>
-                            <Button variant='contained' style={countdown.button}>Mint Now</Button>
+                            <Button href='https://crossmint.shinobisers.com/' variant='contained' style={countdown.button}>Mint Now</Button>
                         </div>
 
                         <div style={styling.description}>
@@ -565,7 +565,7 @@ const LandingPage = () => {
                         <div style={mobile.countdownContainer}>
                             <p style={mobile.countdownTitle} className='font'>Mint Starting In: </p>
                             <Countdown date={'2022-02-05T19:00:00.00+00:00'} renderer={renderer}/>
-                            <Button variant='contained' style={mobile.countdownButton}>Mint Now</Button>
+                            <Button href='https://crossmint.shinobisers.com/' variant='contained' style={mobile.countdownButton}>Mint Now</Button>
                         </div>
 
                         <div style={mobile.aboutDescription}>
